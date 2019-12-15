@@ -1,0 +1,230 @@
+@import "reset.css";
+
+@font-face {
+  font-family: FuturaDemiC;
+  src: url(../../fonts/FuturaDemiC.woff) format("webopen"),
+    url(../../fonts/FuturaDemiC.ttf) format("truetype"),
+    url(../../fonts/FuturaDemiC.eoteot?#iefix) format("embedded-opentype");
+}
+$bg-dark: #131313;
+$colorE3B873: #e3b873;
+$colorWhite: #fff;
+body {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+// wr-home
+header {
+  display: flex;
+  align-items: center;
+  height: 83px;
+  background: $bg-dark;
+  ul {
+    display: flex;
+    margin-left: 47px;
+  }
+  li a {
+    font-family: FuturaBookC;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $colorWhite;
+    margin-left: 48px;
+  }
+  .call {
+    font-family: FuturaDemiC;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 37px;
+    text-align: center;
+    width: 161px;
+    text-transform: uppercase;
+    margin-left: 45px;
+    color: $colorWhite;
+    border-radius: 2px;
+    margin-top: 2px;
+    border: 1px solid $colorWhite;
+    box-sizing: border-box;
+  }
+  .call:hover {
+    background: #e3b873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  }
+}
+.logo,
+.phone {
+  font-family: FuturaDemiC;
+  font-weight: 600;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $colorE3B873;
+}
+.phone {
+  border-bottom: solid 1px $colorE3B873;
+  margin-left: 74px;
+}
+.logo {
+  margin-left: 83px;
+}
+.repair {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../img/repair.jpg);
+  background-size: cover;
+  flex-grow: 1;
+  p {
+    font-family: FuturaBookC;
+    font-size: 22px;
+    line-height: 30px;
+    color: $colorWhite;
+    margin: 16px 0 0 61px;
+    white-space: pre-line;
+  }
+  h1 {
+    font-family: Yeseva One;
+    font-size: 40px;
+    line-height: 53px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 191px 0 0 61px;
+    white-space: pre-line;
+  }
+}
+.buttons {
+  display: flex;
+  margin: 45px 0 210px 50px;
+  a {
+    border: 1px solid $colorWhite;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 207px;
+    font-family: FuturaDemiC;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 49px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $colorWhite;
+    margin: 0 10px;
+  }
+  a:hover {
+    background: $colorE3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+  }
+}
+.homepage {
+  display: flex;
+}
+.instagram {
+  background: $bg-dark;
+  width: 82px;
+  position: relative;
+  a {
+    font-family: FuturaDemiC;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: $colorE3B873;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    display: inline-block;
+    position: relative;
+    top: 264px;
+  }
+  a:after {
+    content: ("");
+    width: 51px;
+    height: 1.5px;
+    background-color: $colorE3B873;
+    position: absolute;
+    top: 5px;
+    left: 90px;
+  }
+}
+/* wr-projects*/
+.wr-projects {
+  background: $bg-dark;
+}
+.sl1 {
+  margin-top: 26px;
+  span {
+    font-family: Yeseva One;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: $colorE3B873;
+  }
+  p {
+    font-family: FuturaBookC;
+    font-size: 15px;
+    line-height: 24px;
+    color: $colorWhite;
+  }
+  .cost {
+    margin-top: 46px;
+  }
+  .column1 {
+    margin-right: 68px;
+  }
+}
+#slick-slide00 /*как здесь не обратиться к id*/ {
+  display: flex;
+}
+
+.slider2 {
+  max-width: 846px;
+  margin-top: 105px;
+  padding: 0;
+  img {
+    margin-right: 20px;
+  }
+}
+.block {
+  width: 492px;
+  h2 {
+    font-family: Yeseva One;
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: $colorE3B873;
+    letter-spacing: -2px;
+    max-width: 150px;
+    display: inline-block;
+    margin-top: 172px;
+  }
+  p {
+    font-family: FuturaBookC;
+    font-size: 18px;
+    line-height: 29px;
+    color: $colorWhite;
+    margin-top: 21px;
+    max-width: 440px;
+  }
+}
+.common {
+  display: flex;
+  justify-content: flex-end;
+}
+.slider1 .slick-dots li button {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  height: 0;
+  width: 0;
+}
+
+.slider1 .slick-dots li button::before {
+  content: none;
+}
+.slider2 .slick-list {
+  padding: 0px 156px 0 0;
+}
+
+// // svg {
+//   width: 400px;
+//   height: 200px;
+// }
