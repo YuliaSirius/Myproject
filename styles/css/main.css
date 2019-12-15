@@ -34,6 +34,9 @@ header li a {
   color: #fff;
   margin-left: 48px;
 }
+header li a:hover {
+  color: #e3b873;
+}
 header .call {
   font-family: FuturaDemiC;
   font-weight: 600;
@@ -177,10 +180,18 @@ header .call:hover {
   display: flex;
 }
 
+#slick-slide01 {
+  display: flex;
+}
+
+#slick-slide02 {
+  display: flex;
+}
+
 .block2 {
   display: flex;
   flex-direction: column;
-  margin-top: 104px;
+  margin: 104px 0 414px 0;
 }
 .block2 ul {
   display: flex;
@@ -249,7 +260,7 @@ header .call:hover {
 }
 
 .slider1 .slick-dots li {
-  left: -147px;
+  left: -137px;
   bottom: 110px;
 }
 .slider1 .slick-dots li button {
@@ -269,6 +280,29 @@ header .call:hover {
 
 .slider2 .slick-list {
   padding-right: 146px;
+}
+
+/* wr-video */
+.video {
+  margin-top: -326px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video h3 {
+  font-family: Yeseva One;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.video img {
+  margin-top: 12px;
+}
+.video iframe {
+  width: 560;
+  height: 315;
 }
 
 /*# sourceMappingURL=main.css.map */

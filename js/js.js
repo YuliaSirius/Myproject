@@ -4,7 +4,8 @@ $(document).ready(function() {
     slidesToScroll: 1,
     asNavFor: ".slider2",
     dots: true,
-    arrows: false
+    arrows: false,
+    // infinite: false,
      });
 });
 
@@ -16,7 +17,7 @@ $(document).ready(function() {
     asNavFor: ".slider1",
     // centerMode: false,
     // centerPadding: '156px',
-    infinite: true,
+    // infinite: false,
     prevArrow: false,
   });
 });
