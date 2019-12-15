@@ -14,8 +14,8 @@ $(document).ready(function() {
     slidesToScroll: 1,
     arrows: true,
     asNavFor: ".slider1",
-    centerMode: false,
-    centerPadding: '56px',
+    // centerMode: false,
+    // centerPadding: '156px',
     infinite: true,
     prevArrow: false,
   });

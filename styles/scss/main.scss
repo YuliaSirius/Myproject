@@ -147,9 +147,6 @@ header {
   }
 }
 /* wr-projects*/
-.wr-projects {
-  background: $bg-dark;
-}
 .sl1 {
   margin-top: 26px;
   span {
@@ -175,17 +172,39 @@ header {
 #slick-slide00 /*как здесь не обратиться к id*/ {
   display: flex;
 }
-
+.block2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 104px;
+  ul {
+    display: flex;
+    li {
+      font-family: Yeseva One;
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: uppercase;
+      color: $colorE3B873;
+      margin-right: 60px;
+      padding-bottom: 5px;
+      border-bottom: solid 1px transparent;
+    }
+    li:hover {
+      border-bottom: solid 1px $colorE3B873;
+    }
+  }
+}
 .slider2 {
   max-width: 846px;
-  margin-top: 105px;
+  margin-top: 45px;
   padding: 0;
   img {
     margin-right: 20px;
+    width: auto;
   }
 }
-.block {
+.block1 {
   width: 492px;
+  position: relative;
   h2 {
     font-family: Yeseva One;
     font-size: 27px;
@@ -196,6 +215,15 @@ header {
     max-width: 150px;
     display: inline-block;
     margin-top: 172px;
+  }
+  h2:after {
+    top: 226px;
+    content: "";
+    width: 92px;
+    height: 1px;
+    background-color: #e3b873;
+    position: absolute;
+    left: 161px;
   }
   p {
     font-family: FuturaBookC;
@@ -209,22 +237,26 @@ header {
 .common {
   display: flex;
   justify-content: flex-end;
+  background: $bg-dark;
 }
-.slider1 .slick-dots li button {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 30px;
-  height: 0;
-  width: 0;
+.slider1 .slick-dots li {
+  left: -147px;
+  bottom: 110px;
+  button {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    height: 0;
+    width: 0;
+  }
+  button:hover,
+  button:focus {
+    background-color: #fff;
+  }
 }
-
 .slider1 .slick-dots li button::before {
   content: none;
 }
 .slider2 .slick-list {
-  padding: 0px 156px 0 0;
+  padding-right: 146px;
 }
 
-// // svg {
-//   width: 400px;
-//   height: 200px;
-// }
