@@ -8,7 +8,9 @@
 $bg-dark: #131313;
 $colorE3B873: #e3b873;
 $colorWhite: #fff;
-$colortext: #363636;
+$color363636: #363636;
+$color181818: #181818;
+$color959595: #959595;
 body {
   font-size: 14px;
 }
@@ -93,7 +95,7 @@ header {
     font-size: 40px;
     line-height: 53px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: $colorWhite;
     margin: 191px 0 0 61px;
     white-space: pre-line;
   }
@@ -302,12 +304,12 @@ iframe {
   align-items: center;
   position: relative;
   top: 295px;
-    p {
+  p {
     font-family: FuturaBookC;
     font-size: 20px;
     line-height: 34px;
     text-align: center;
-    color: $colortext;
+    color: $color363636;
     width: 675px;
   }
   form {
@@ -317,4 +319,64 @@ iframe {
       margin: 0 25px;
     }
   }
+}
+/* our-team */
+.our-team {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: 1fr;
+  justify-items: center;
+figcaption {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  p {
+  font-family: Yeseva One;
+  font-size: 18px;
+  line-height: 25px;
+  color: $color181818;
+  }
+span {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color959595;
+}
+}
+}
+.team-text1 {
+  font-family: FuturaBookC;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  // color: $colorWhite;
+  color: red;
+}
+.team-text2 {
+  font-family: FuturaBookC;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+    color: $color363636;
+}
+.our-clients {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.team-photo,
+.clients-reviews {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+.wr-ourteam h3 {
+  font-family: Yeseva One;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  // color: $colorWhite;
+  color: red;
 }

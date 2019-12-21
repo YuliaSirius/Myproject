@@ -93,7 +93,7 @@ header .call:hover {
   font-size: 40px;
   line-height: 53px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
   margin: 191px 0 0 61px;
   white-space: pre-line;
 }
@@ -334,6 +334,70 @@ iframe {
 }
 .request form label {
   margin: 0 25px;
+}
+
+/* our-team */
+.our-team {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.our-team figcaption {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.our-team figcaption p {
+  font-family: Yeseva One;
+  font-size: 18px;
+  line-height: 25px;
+  color: #181818;
+}
+.our-team figcaption span {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 26px;
+  color: #959595;
+}
+
+.team-text1 {
+  font-family: FuturaBookC;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: red;
+}
+
+.team-text2 {
+  font-family: FuturaBookC;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  color: #363636;
+}
+
+.our-clients {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.team-photo,
+.clients-reviews {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wr-ourteam h3 {
+  font-family: Yeseva One;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
 }
 
 /*# sourceMappingURL=main.css.map */
