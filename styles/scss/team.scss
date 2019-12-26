@@ -79,36 +79,23 @@ header .container {
 .logo {
   margin-left: 83px;
 }
-/* .wr-ourteam */
-.our-team {
-  display: grid;
-  grid-template-rows: 41px 47px 66px min-content;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  figcaption {
-    text-align: center;
-    width: 232px;
-    height: 135px;
-    position: relative;
-    top: -80px;
-    background-color: $colorWhite;
-    margin: 0 auto;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
-    padding-top: 19px;
-    box-sizing: border-box;
-  }
-  p {
+/* .wr-ourteam, section made using grid*/
+.wr-ourteam {
+  padding: 30px 0;
+  h3 {
     font-family: Yeseva One;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
     color: $color181818;
+    margin-bottom: 15px;
   }
-  span {
-    font-family: FuturaBookC;
-    font-size: 18px;
-    line-height: 26px;
-    color: $color959595;
-  }
+}
+.our-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .text1 {
   font-family: FuturaBookC;
@@ -117,125 +104,180 @@ header .container {
   text-align: center;
   color: $color181818;
   max-width: 460px;
+  margin-top: 15px;
 }
 .text2 {
+  grid-row: 17/18;
+  grid-column: 1/4;
   font-family: FuturaBookC;
   font-size: 20px;
   line-height: 34px;
   text-align: center;
-  color: $color363636;
+  color: $color181818;
+  max-width: 605px;
+  white-space: pre-wrap;
+  margin-top: 46px;
+  justify-self: center;
 }
-.our-clients {
-  display: grid;
-  grid-template-rows: min-content;
-  grid-template-columns: 1fr;
-  justify-items: center;
+.text2:before {
+  content: "";
+  background-color: $colorE3B873;
+  width: 55px;
+  height: 2px;
+  display: block;
+  position: relative;
+  left: calc(50% - 27px);
+  top: -9px;
 }
 .team-photo {
   display: grid;
-  grid-template-rows: 500px;
+  grid-template-rows: repeat(14, min-content);
   grid-template-columns: repeat(3, 1fr);
-  gap: 0 105px;
+  gap: 50px 70px;
+  margin-top: 20px;
 }
-.manager,
-.designer,
-.foreman {
-  figcaption:after {
-    content: "work experience 8 years";
-    height: 45px;
-    background-color: $colorE3B873;
-    display: block;
-    position: relative;
-    font-family: Yeseva One;
-    text-transform: uppercase;
-    color: $colorWhite;
-    bottom: -21px;
-    line-height: 45px;
-  }
-}
-.manager:before {
-  content: "";
-  position: relative;
-  background-image: url(../../img/manager.jpg);
-  background-repeat: no-repeat;
-  height: 70px;
-  width: 70px;
-  display: block;
-  top: 35px;
-  left: -35px;
-  z-index: 5;
-  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
-}
-.designer {
-  figcaption:after {
-    content: "work experience 6 years";
-  }
-}
-.designer:before {
-  content: "";
-  position: relative;
-  background-image: url(../../img/designer.jpg);
-  background-repeat: no-repeat;
-  height: 70px;
-  width: 70px;
-  display: block;
-  top: 35px;
-  left: -35px;
-  z-index: 5;
-  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
-}
-.foreman {
-  figcaption:after {
-    content: "work experience 12 years";
-  }
-}
-.foreman::before {
-  content: "";
-  position: relative;
-  background-image: url(../../img/foreman.jpg);
-  background-repeat: no-repeat;
-  height: 70px;
-  width: 70px;
-  display: block;
-  top: 35px;
-  left: -35px;
-  z-index: 5;
-  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
-}
-.wr-ourteam {
-  padding: 20px 0;
-  h3 {
-    font-family: Yeseva One;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-    text-transform: uppercase;
-    color: $color181818;
-  }
-}
-.clients-reviews {
+.foto {
   display: grid;
-  grid-template-rows: min-content;
-  grid-template-columns: repeat(3, 1fr);
-  figcaption p {
+  grid-template-rows: 35px 282px 83px 10px 45px min-content;
+  grid-template-columns: 35px 20px 230px 20px 35px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  img:first-child {
+    grid-row: 2/4;
+    grid-column: 2/5;
+    justify-self: center;
+  }
+  img:nth-child(2) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.7);
+  }
+  p:nth-child(3) {
+    grid-row: 3/5;
+    grid-column: 3/4;
     font-family: Yeseva One;
     font-size: 18px;
-    line-height: 23px;
+    line-height: 25px;
     color: $color181818;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   }
-  .review {
+  span {
     font-family: FuturaBookC;
-    font-size: 15px;
-    line-height: 27px;
+    font-size: 18px;
+    line-height: 26px;
     color: $color959595;
-    grid-row: 2 / 3;
   }
-  figure {
-    grid-row: 1 / 2;
-    display: flex;
-    align-items: center;
+  p:nth-child(4) {
+    grid-row: 5/6;
+    grid-column: 3/4;
+    background-color: $colorE3B873;
+    font-family: Yeseva One;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $colorWhite;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   }
-  img {
-    border-radius: 50%;
+  p:nth-child(5) {
+    grid-row: 6/7;
+    grid-column: 1/6;
+    font-family: FuturaBookC;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: $color181818;
+    margin-top: 20px;
+    background-color: $colorWhite;
+  }
+}
+.Tulyakov {
+  grid-row: 2/7;
+  grid-column: 1/2;
+}
+.Kotlyarova {
+  grid-row: 1/6;
+  grid-column: 2/3;
+}
+.Efimov {
+  grid-row: 2/7;
+  grid-column: 3/4;
+}
+.Krasovskaja {
+  grid-row: 7/12;
+  grid-column: 1/2;
+}
+.Granin {
+  grid-row: 6/11;
+  grid-column: 2/3;
+}
+.Prihodko {
+  grid-row: 7/12;
+  grid-column: 3/4;
+}
+.Trubeckoi {
+  grid-row: 12/17;
+  grid-column: 1/2;
+}
+.Mihalkov {
+  grid-row: 11/16;
+  grid-column: 2/3;
+}
+.Plishevcky {
+  grid-row: 12/17;
+  grid-column: 3/4;
+}
+
+@media all and (max-width: 1250px) {
+  .team-photo {
+    grid-template-rows: repeat(25, 1fr);
+    grid-template-columns: repeat(2, min-content);
+    gap: 40px 70px;
+  }
+  .Tulyakov {
+    grid-row: 1/6;
+    grid-column: 1/2;
+  }
+  .Kotlyarova {
+    grid-row: 2/7;
+    grid-column: 2/3;
+  }
+  .Efimov {
+    grid-row: 6/11;
+    grid-column: 1/2;
+  }
+  .Krasovskaja {
+    grid-row: 7/12;
+    grid-column: 2/3;
+  }
+  .Granin {
+    grid-row: 11/16;
+    grid-column: 1/2;
+  }
+  .Prihodko {
+    grid-row: 12/17;
+    grid-column: 2/3;
+  }
+  .Trubeckoi {
+    grid-row: 16/21;
+    grid-column: 1/2;
+  }
+  .Mihalkov {
+    grid-row: 17/22;
+    grid-column: 2/3;
+  }
+  .Plishevcky {
+    grid-row: 21/26;
+    grid-column: 1/2;
+  }
+  .text2 {
+    grid-row: 22/26;
+    grid-column: 2/3;
   }
 }

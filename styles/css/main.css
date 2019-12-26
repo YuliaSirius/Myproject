@@ -1,7 +1,15 @@
 @import "reset.css";
 @font-face {
   font-family: FuturaDemiC;
-  src: url(../../fonts/FuturaDemiC.woff) format("webopen"), url(../../fonts/FuturaDemiC.ttf) format("truetype"), url(../../fonts/FuturaDemiC.eoteot?#iefix) format("embedded-opentype");
+  src: url(../../fonts/futurademic.woff) format("webopen"), url(../../fonts/futurademic.ttf) format("truetype"), url(../../fonts/futurademic.eoteot?#iefix) format("embedded-opentype");
+}
+@font-face {
+  font-family: FuturaBookC;
+  src: url(../../fonts/futurabookc.woff) format("webopen"), url(../../fonts/futurabookc.ttf) format("truetype"), url(../../fonts/futurabookc.eoteot?#iefix) format("embedded-opentype");
+}
+@font-face {
+  font-family: YesevaOne;
+  src: url(../../fonts/yesevaone.woff) format("webopen"), url(../../fonts/yesevaone.otf) format("opentype");
 }
 body {
   font-size: 14px;
@@ -13,31 +21,48 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1470px;
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 
+/* header */
 header {
-  display: flex;
-  align-items: center;
-  height: 83px;
   background: #131313;
 }
-header ul {
+
+header .container {
   display: flex;
-  margin-left: 47px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  height: 83px;
 }
-header li a {
+header .container div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 1005px;
+  margin-right: 15px;
+}
+header .container ul {
+  display: flex;
+  justify-content: space-around;
+  min-width: 630px;
+}
+header .container li a {
   font-family: FuturaBookC;
   line-height: 16px;
   text-transform: uppercase;
   color: #fff;
-  margin-left: 48px;
+  cursor: pointer;
 }
-header li a:hover {
+header .container li a:hover {
   color: #e3b873;
 }
-header .call {
+header .container .call {
   font-family: FuturaDemiC;
   font-weight: 600;
   font-size: 13px;
@@ -45,16 +70,15 @@ header .call {
   text-align: center;
   width: 161px;
   text-transform: uppercase;
-  margin-left: 45px;
   color: #fff;
   border-radius: 2px;
-  margin-top: 2px;
   border: 1px solid #fff;
   box-sizing: border-box;
+  cursor: pointer;
 }
-header .call:hover {
+header .container .call:hover {
   background: #e3b873;
-  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
 }
 
 .logo,
@@ -67,40 +91,73 @@ header .call:hover {
 }
 
 .phone {
-  border-bottom: solid 1px #e3b873;
-  margin-left: 74px;
+  display: inline-block;
+  border-bottom: solid 1px;
+  color: #e3b873;
 }
 
-.logo {
-  margin-left: 83px;
+/* wr-home */
+.wr-home {
+  background: #131313;
 }
-
-.repair {
+.wr-home .container {
+  display: flex;
+}
+.wr-home .home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../img/repair.jpg);
   background-size: cover;
-  flex-grow: 1;
+  width: 100%;
+  min-height: 707px;
+  padding-left: 60px;
 }
-.repair p {
+.wr-home .home p {
   font-family: FuturaBookC;
   font-size: 22px;
   line-height: 30px;
   color: #fff;
-  margin: 16px 0 0 61px;
   white-space: pre-line;
+  margin-top: 15px;
 }
-.repair h1 {
-  font-family: Yeseva One;
+.wr-home .home h1 {
+  font-family: YesevaOne, cursive;
   font-size: 40px;
   line-height: 53px;
   text-transform: uppercase;
   color: #fff;
-  margin: 191px 0 0 61px;
   white-space: pre-line;
+}
+.wr-home .home h1 span {
+  color: #e3b873;
+}
+
+aside {
+  min-width: 82px;
+}
+aside .link {
+  font-family: FuturaDemiC;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #e3b873;
+  text-transform: uppercase;
+  transform: rotate(90deg) translateX(340%);
+  display: inline-block;
+}
+aside .link:after {
+  content: "";
+  width: 51px;
+  height: 1.5px;
+  background-color: #e3b873;
+  display: block;
+  transform: translate(90px, -11px);
 }
 
 .buttons {
   display: flex;
-  margin: 45px 0 210px 50px;
+  margin-top: 46px;
 }
 .buttons a {
   border: 1px solid #fff;
@@ -114,50 +171,28 @@ header .call:hover {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  margin: 0 10px;
+  margin-right: 20px;
 }
 .buttons a:hover {
   background: #e3b873;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
 }
 
-.homepage {
-  display: flex;
-}
-
-.instagram {
-  background: #131313;
-  width: 82px;
-  position: relative;
-}
-.instagram a {
-  font-family: FuturaDemiC;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
-  color: #e3b873;
-  text-transform: uppercase;
-  transform: rotate(90deg);
-  display: inline-block;
-  position: relative;
-  top: 264px;
-}
-.instagram a:after {
-  content: "";
-  width: 51px;
-  height: 1.5px;
-  background-color: #e3b873;
-  position: absolute;
-  top: 5px;
-  left: 90px;
-}
-
 /* wr-projects*/
+.wr-projects {
+  background-color: #131313;
+}
+
+.wr-projects .container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .sl1 {
   margin-top: 26px;
 }
 .sl1 span {
-  font-family: Yeseva One;
+  font-family: YesevaOne;
   font-size: 18px;
   line-height: 25px;
   text-transform: uppercase;
@@ -197,7 +232,7 @@ header .call:hover {
   display: flex;
 }
 .block2 ul li {
-  font-family: Yeseva One;
+  font-family: YesevaOne;
   font-size: 14px;
   line-height: 19px;
   text-transform: uppercase;
@@ -205,6 +240,7 @@ header .call:hover {
   margin-right: 60px;
   padding-bottom: 5px;
   border-bottom: solid 1px transparent;
+  cursor: pointer;
 }
 .block2 ul li:hover {
   border-bottom: solid 1px #e3b873;
@@ -219,13 +255,32 @@ header .call:hover {
   margin-right: 20px;
   width: auto;
 }
+.slider2 .slick-next {
+  right: 65px;
+}
+.slider2 .slick-next:hover {
+  cursor: pointer;
+}
+.slider2 .slick-next:before {
+  content: "";
+  background: url(../../img/arrow.png);
+  background-size: 60%;
+  background-color: #e3b873;
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 55% 60%;
+  box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+}
 
 .block1 {
   width: 492px;
   position: relative;
 }
 .block1 h2 {
-  font-family: Yeseva One;
+  font-family: YesevaOne;
   font-size: 27px;
   line-height: 37px;
   text-transform: uppercase;
@@ -253,12 +308,6 @@ header .call:hover {
   max-width: 440px;
 }
 
-.bg-projects {
-  display: flex;
-  justify-content: flex-end;
-  background: #131313;
-}
-
 .slider1 .slick-dots li {
   left: -137px;
   bottom: 110px;
@@ -283,6 +332,14 @@ header .call:hover {
 }
 
 /* wr-video */
+.wr-video {
+  background-color: #fff;
+}
+
+.wr-video .container {
+  position: relative;
+}
+
 .video {
   display: flex;
   flex-direction: column;
@@ -293,7 +350,7 @@ header .call:hover {
   left: 310px;
 }
 .video h3 {
-  font-family: Yeseva One;
+  font-family: YesevaOne;
   font-size: 20px;
   line-height: 28px;
   text-align: center;
@@ -306,11 +363,6 @@ header .call:hover {
 
 iframe {
   margin-top: 30px;
-}
-
-.bg-video {
-  position: relative;
-  background-color: #fff;
 }
 
 .request {
@@ -334,70 +386,6 @@ iframe {
 }
 .request form label {
   margin: 0 25px;
-}
-
-/* our-team */
-.our-team {
-  display: grid;
-  grid-template-rows: min-content;
-  grid-template-columns: 1fr;
-  justify-items: center;
-}
-.our-team figcaption {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-.our-team figcaption p {
-  font-family: Yeseva One;
-  font-size: 18px;
-  line-height: 25px;
-  color: #181818;
-}
-.our-team figcaption span {
-  font-family: FuturaBookC;
-  font-size: 18px;
-  line-height: 26px;
-  color: #959595;
-}
-
-.team-text1 {
-  font-family: FuturaBookC;
-  font-size: 20px;
-  line-height: 27px;
-  text-align: center;
-  color: red;
-}
-
-.team-text2 {
-  font-family: FuturaBookC;
-  font-size: 20px;
-  line-height: 34px;
-  text-align: center;
-  color: #363636;
-}
-
-.our-clients {
-  display: grid;
-  grid-template-rows: min-content;
-  grid-template-columns: 1fr;
-  justify-items: center;
-}
-
-.team-photo,
-.clients-reviews {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.wr-ourteam h3 {
-  font-family: Yeseva One;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  text-transform: uppercase;
-  color: red;
 }
 
 /*# sourceMappingURL=main.css.map */

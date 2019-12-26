@@ -1,0 +1,128 @@
+@import "reset.css";
+@font-face {
+  font-family: FuturaDemiC;
+  src: url(../../fonts/FuturaDemiC.woff) format("webopen"), url(../../fonts/FuturaDemiC.ttf) format("truetype"), url(../../fonts/FuturaDemiC.eoteot?#iefix) format("embedded-opentype");
+}
+body {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+/* header */
+header {
+  background: #131313;
+}
+header ul {
+  display: flex;
+  margin-left: 47px;
+}
+header li a {
+  font-family: FuturaBookC;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 48px;
+}
+header li a:hover {
+  color: #e3b873;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  height: 83px;
+}
+
+.call {
+  font-family: FuturaDemiC;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 37px;
+  text-align: center;
+  width: 161px;
+  text-transform: uppercase;
+  margin-left: 45px;
+  color: #fff;
+  border-radius: 2px;
+  margin-top: 2px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.call:hover {
+  background: #e3b873;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+}
+
+.logo,
+.phone {
+  font-family: FuturaDemiC;
+  font-weight: 600;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #e3b873;
+}
+
+.phone {
+  border-bottom: solid 1px #e3b873;
+  margin-left: 74px;
+}
+
+.logo {
+  margin-left: 83px;
+}
+
+/* .wr-reviews, section made using grid*/
+.our-clients {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+h3 {
+  font-family: Yeseva One;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #181818;
+}
+
+.clients-reviews {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: repeat(3, 1fr);
+}
+.clients-reviews figcaption p {
+  font-family: Yeseva One;
+  font-size: 18px;
+  line-height: 23px;
+  color: #181818;
+}
+.clients-reviews .review {
+  font-family: FuturaBookC;
+  font-size: 15px;
+  line-height: 27px;
+  color: #959595;
+  grid-row: 2/3;
+}
+.clients-reviews figure {
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+}
+.clients-reviews img {
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=reviews.css.map */
