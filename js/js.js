@@ -4,9 +4,9 @@ $(document).ready(function() {
     slidesToScroll: 1,
     asNavFor: ".slider2",
     dots: true,
-    arrows: false,
+    arrows: false
     // infinite: false,
-     });
+  });
 });
 
 $(document).ready(function() {
@@ -18,6 +18,15 @@ $(document).ready(function() {
     // centerMode: false,
     // centerPadding: '156px',
     // infinite: false,
-    prevArrow: false,
+    prevArrow: false
+  });
+});
+
+$(document).ready(function() {
+  $(".slider-steps").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
   });
 });

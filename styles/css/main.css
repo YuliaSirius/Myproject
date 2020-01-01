@@ -28,6 +28,22 @@ a {
   box-sizing: border-box;
 }
 
+h2 {
+  font-family: YesevaOne;
+  font-size: 27px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #e3b873;
+}
+
+h3 {
+  font-family: Yeseva One;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* header */
 header {
   background: #131313;
@@ -107,7 +123,7 @@ header .container .call:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../img/repair.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../img/wr-repair.jpg);
   background-size: cover;
   width: 100%;
   min-height: 707px;
@@ -280,11 +296,6 @@ aside .link:after {
   position: relative;
 }
 .block1 h2 {
-  font-family: YesevaOne;
-  font-size: 27px;
-  line-height: 37px;
-  text-transform: uppercase;
-  color: #e3b873;
   letter-spacing: -2px;
   max-width: 150px;
   display: inline-block;
@@ -319,7 +330,8 @@ aside .link:after {
   width: 0;
 }
 .slider1 .slick-dots li button:hover,
-.slider1 .slick-dots li button:focus {
+.slider1 .slick-dots li button:focus,
+.slider1 .slick-dots li button:active {
   background-color: #fff;
 }
 
@@ -342,11 +354,6 @@ aside .link:after {
   transform: translateY(-326px);
 }
 .wr-video h3 {
-  font-family: YesevaOne;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  text-transform: uppercase;
   color: #fff;
 }
 .wr-video img {
@@ -381,12 +388,25 @@ aside .link:after {
   flex-direction: column;
   align-items: center;
   margin-top: 93px;
+  min-height: 103px;
+  justify-content: space-between;
 }
 .wr-video form label {
   font-family: FuturaBookC;
   font-size: 16px;
   line-height: 22px;
   color: #181818;
+}
+.wr-video form > label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-color: #e3b873;
+  border-radius: 1px;
+  background-image: url(../../img/checkbox.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .wr-video form div {
   display: flex;
@@ -419,8 +439,7 @@ aside .link:after {
   border-radius: 2px;
 }
 .wr-video form input[type=checkbox] {
-  margin-top: 35px;
-  margin-right: 10px;
+  opacity: 0;
 }
 
 /* wr-types */
@@ -431,14 +450,9 @@ aside .link:after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -184px;
+  margin-top: -182px;
 }
 .wr-types h3 {
-  font-family: Yeseva One;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  text-transform: uppercase;
   color: #181818;
 }
 .wr-types img {
@@ -497,12 +511,11 @@ aside .link:after {
 /* wr-measurement */
 .wr-measurement {
   background-color: #fff;
-  padding: 80px 0;
+  padding: 80px 0 205px;
 }
 .wr-measurement .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .free-metering {
@@ -511,24 +524,37 @@ aside .link:after {
   background-position-y: -55px;
 }
 .free-metering svg {
-  width: 480px;
+  width: 800px;
   height: 637px;
+}
+.free-metering svg text {
+  font-family: Yeseva One;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+.free-metering svg text tspan {
+  font-family: FuturaMediumC;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .measurer {
-  background-color: #131313;
-  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
-  min-width: 506px;
-  height: 509px;
+  margin-right: 98px;
+  padding: 51px 0;
 }
 .measurer form {
-  width: 80%;
-  height: 100%;
+  background-color: #131313;
+  width: 506px;
+  height: 509px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+  padding: 24px 47px 27px;
+  box-sizing: border-box;
 }
 .measurer form p {
   font-family: FuturaDemiC;
@@ -543,12 +569,14 @@ aside .link:after {
   font-size: 15px;
   line-height: 20px;
   color: rgba(255, 255, 255, 0.5);
-  order: 1;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.measurer form input {
+.measurer form label:last-of-type {
+  flex-direction: row;
+}
+.measurer form input[type=text] {
   font-family: FuturaMediumC;
   font-size: 18px;
   line-height: 25px;
@@ -574,6 +602,276 @@ aside .link:after {
 }
 .measurer form input::placeholder {
   color: #fff;
+}
+.measurer form input[type=submit] {
+  width: 213px;
+  height: 51px;
+  background: #e3b873;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+  border: none;
+  font-family: FuturaDemiC;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  transform: translateX(45%);
+}
+.measurer form input[type=checkbox] {
+  opacity: 0;
+}
+.measurer form label:last-of-type::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-color: #e3b873;
+  border-radius: 1px;
+  background-image: url(../../img/checkbox.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.measurer .help {
+  font-family: FuturaDemiC;
+  font-size: 20px;
+  line-height: 25px;
+  color: #e3b873;
+  text-shadow: 0px 3px 10px rgba(160, 122, 61, 0.15);
+  max-width: 245px;
+  position: relative;
+  padding-left: 128px;
+  margin-top: 47px;
+}
+.measurer .help:before {
+  content: "";
+  content: "";
+  background-color: #e3b873;
+  background-image: url(../../img/pig.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: none;
+  display: block;
+  position: absolute;
+  left: 8%;
+  top: -16%;
+}
+
+/* wr-realization */
+.wr-realization .container {
+  background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)), url(../../img/wr-realization.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 135px 0 91px 114px;
+  position: relative;
+}
+.wr-realization .container .list h2 {
+  max-width: 280px;
+  margin-bottom: 37px;
+}
+.wr-realization .container .list ul {
+  font-family: Proxima Nova;
+  font-size: 20px;
+  line-height: 34px;
+  color: #fff;
+  min-height: 526px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.pictures {
+  display: flex;
+  min-width: 751px;
+  justify-content: space-between;
+  position: absolute;
+  right: 116px;
+  top: -113px;
+}
+.pictures div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pictures div img {
+  max-width: 354px;
+}
+
+.first-column {
+  position: relative;
+  top: 72px;
+  min-height: 947px;
+}
+
+.second-column img:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+/* design */
+.wr-design {
+  padding-top: 152px;
+}
+.wr-design .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wr-design .container h3 {
+  color: #181818;
+  margin-bottom: 13px;
+}
+.wr-design .container > p {
+  font-family: FuturaBookC;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #363636;
+  margin-top: 18px;
+  white-space: pre-line;
+}
+
+.design {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 1300px;
+  margin-top: 48px;
+}
+
+.design-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.design-projects div {
+  min-width: 330px;
+  min-height: 286px;
+  background: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  transform: translateY(-128px);
+  padding-left: 32px;
+  padding-top: 22px;
+  box-sizing: border-box;
+}
+.design-projects .design-name {
+  font-family: Yeseva One;
+  font-size: 18px;
+  line-height: 25px;
+  color: #363636;
+}
+.design-projects ul {
+  font-family: FuturaBookC;
+  font-size: 15px;
+  line-height: 25px;
+  color: #959595;
+  list-style: disc;
+  margin-left: 16px;
+  margin-top: 6px;
+}
+.design-projects .cost {
+  font-family: Yeseva One;
+  font-size: 18px;
+  line-height: 54px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #e3b873;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  width: 193px;
+  height: 54px;
+  transform: translate(-32px, 32px);
+  padding-left: 35px;
+}
+
+/* wr-steps */
+.wr-steps {
+  background-color: #131313;
+  height: 2000px;
+}
+.wr-steps .container {
+  padding-left: 115px;
+}
+.wr-steps .container > p {
+  font-family: FuturaDemiC;
+  font-size: 15px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.wr-steps .container h2 {
+  max-width: 160px;
+  position: relative;
+}
+.wr-steps .container h2:after {
+  content: "";
+  width: 92px;
+  height: 1px;
+  background-color: #e3b873;
+  position: absolute;
+  left: 235px;
+  top: 53px;
+}
+
+.slider-steps {
+  max-width: 325px;
+  min-height: 370px;
+}
+.slider-steps span {
+  font-family: Yeseva One;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.slider-steps p:first-of-type {
+  font-family: Yeseva One;
+  font-size: 15px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #e3b873;
+}
+.slider-steps p {
+  font-family: FuturaBookC;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+}
+.slider-steps .slick-dots li button {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  height: 10px;
+  width: 10px;
+}
+.slider-steps .slick-dots li button:hover,
+.slider-steps .slick-dots li button:focus,
+.slider-steps .slick-dots li button:active {
+  background-color: #fff;
+}
+.slider-steps .slick-dots li button::before {
+  content: none;
+}
+.slider-steps .slick-dots:after {
+  content: "";
+  background-image: url(../../img/arrow-slider.png);
+  display: block;
+  width: 42px;
+  height: 14px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -22px;
+  left: 260px;
+}
+.slider-steps .slick-dots:before {
+  content: "";
+  background-image: url(../../img/arrow-slider.png);
+  display: block;
+  width: 42px;
+  height: 14px;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  position: relative;
+  top: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */
