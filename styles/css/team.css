@@ -32,7 +32,7 @@ header li a {
   color: #fff;
   margin-left: 48px;
 }
-header li a:hover {
+header li a:hover, header a:focus, header a:active {
   color: #e3b873;
 }
 

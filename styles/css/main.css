@@ -75,7 +75,9 @@ header .container li a {
   color: #fff;
   cursor: pointer;
 }
-header .container li a:hover {
+header .container li a:hover,
+header .container li a:focus,
+header .container li a:active {
   color: #e3b873;
 }
 header .container .call {
@@ -394,8 +396,10 @@ aside .link:after {
 .wr-video form label {
   font-family: FuturaBookC;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 18px;
   color: #181818;
+  display: flex;
+  flex-direction: row;
 }
 .wr-video form > label::before {
   content: "";
@@ -437,6 +441,7 @@ aside .link:after {
   background-color: #e3b873;
   box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
   border-radius: 2px;
+  border: none;
 }
 .wr-video form input[type=checkbox] {
   opacity: 0;
@@ -659,6 +664,9 @@ aside .link:after {
 }
 
 /* wr-realization */
+.wr-realization {
+  background-color: #fff;
+}
 .wr-realization .container {
   background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)), url(../../img/wr-realization.jpg);
   background-repeat: no-repeat;
@@ -712,7 +720,9 @@ aside .link:after {
 
 /* design */
 .wr-design {
-  padding-top: 152px;
+  background: linear-gradient(to top, #131313 40.5%, #fff 40.5%);
+  padding: 152px;
+  min-height: 740px;
 }
 .wr-design .container {
   display: flex;
@@ -747,13 +757,13 @@ aside .link:after {
 }
 .design-projects div {
   min-width: 330px;
-  min-height: 286px;
   background: #fff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-  transform: translateY(-128px);
+  transform: translateY(293px);
   padding-left: 32px;
   padding-top: 22px;
   box-sizing: border-box;
+  position: absolute;
 }
 .design-projects .design-name {
   font-family: Yeseva One;
@@ -787,35 +797,41 @@ aside .link:after {
 /* wr-steps */
 .wr-steps {
   background-color: #131313;
-  height: 2000px;
 }
 .wr-steps .container {
-  padding-left: 115px;
+  padding: 0 115px;
+  display: flex;
+  justify-content: space-between;
 }
-.wr-steps .container > p {
+.wr-steps .first-flex {
+  min-height: 692px;
+}
+.wr-steps .first-flex > p {
   font-family: FuturaDemiC;
   font-size: 15px;
   line-height: 21px;
   text-transform: uppercase;
   color: #fff;
 }
-.wr-steps .container h2 {
+.wr-steps .first-flex h2 {
   max-width: 160px;
   position: relative;
+  margin-top: 16px;
 }
-.wr-steps .container h2:after {
+.wr-steps .first-flex h2:after {
   content: "";
   width: 92px;
   height: 1px;
   background-color: #e3b873;
   position: absolute;
-  left: 235px;
-  top: 53px;
+  left: 211px;
+  top: 54px;
 }
 
 .slider-steps {
-  max-width: 325px;
-  min-height: 370px;
+  max-width: 312px;
+  min-height: 396px;
+  margin: 84px 0;
 }
 .slider-steps span {
   font-family: Yeseva One;
@@ -830,12 +846,20 @@ aside .link:after {
   line-height: 23px;
   text-transform: uppercase;
   color: #e3b873;
+  margin-top: 18px;
+  white-space: pre-line;
 }
 .slider-steps p {
   font-family: FuturaBookC;
   font-size: 15px;
-  line-height: 25px;
+  line-height: 27px;
   color: #fff;
+  margin-top: 8px;
+  padding: 0 2px;
+}
+.slider-steps .slick-dots li {
+  width: 27px;
+  margin: 0;
 }
 .slider-steps .slick-dots li button {
   background: rgba(255, 255, 255, 0.3);
@@ -872,6 +896,169 @@ aside .link:after {
   transform: rotate(180deg);
   position: relative;
   top: 18px;
+}
+
+.second-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 765px;
+  padding-top: 90px;
+}
+.second-flex ul {
+  display: flex;
+  justify-content: space-between;
+  margin-right: -20px;
+  margin-bottom: 52px;
+}
+.second-flex li {
+  opacity: 0.3;
+  min-width: 120px;
+}
+.second-flex li:hover {
+  opacity: 1;
+}
+.second-flex span {
+  font-family: Yeseva One;
+  font-size: 15px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #fff;
+  border-bottom: solid 1px #e3b873;
+}
+.second-flex p {
+  font-family: FuturaBookC;
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff;
+}
+
+/* wr-ourteam */
+.wr-ourteam {
+  padding: 94px 0;
+  background: linear-gradient(to bottom, #131313 500px, #fff 500px);
+}
+.wr-ourteam .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wr-ourteam .container h3 {
+  color: #fff;
+  margin-bottom: 12px;
+}
+.wr-ourteam .container .text1 {
+  font-family: FuturaBookC;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #fff;
+  max-width: 460px;
+  margin-top: 18px;
+}
+.wr-ourteam .container a {
+  font-family: Yeseva One;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #181818;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: -70px;
+  margin-right: 50px;
+  text-shadow: 0px 3px 10px rgba(160, 122, 61, 0.15);
+}
+.wr-ourteam .container a:hover,
+.wr-ourteam .container a:focus {
+  color: #e3b873;
+}
+.wr-ourteam .container a:after {
+  content: "";
+  background-image: url(../../img/arrow-slider-black.png);
+  display: block;
+  width: 42px;
+  height: 14px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -22px;
+  left: 72px;
+  opacity: 0.7;
+}
+
+.team-photo {
+  display: flex;
+  max-width: 1027px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 83px;
+}
+
+.foto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.foto p {
+  font-family: Yeseva One;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #181818;
+  max-width: 233px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+  align-self: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+  transform: translateY(-61%);
+}
+.foto p span:first-of-type {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #959595;
+  display: block;
+}
+.foto p span:last-of-type {
+  background-color: #e3b873;
+  font-family: Yeseva One;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 45px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-top: 20px;
+}
+
+.square {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.text2 {
+  font-family: FuturaBookC;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  color: #181818;
+  max-width: 605px;
+  white-space: pre-wrap;
+  margin-top: 8px;
+  justify-self: center;
+}
+
+.text2:before {
+  content: "";
+  background-color: #e3b873;
+  width: 55px;
+  height: 2px;
+  display: block;
+  position: relative;
+  left: calc(50% - 27px);
+  top: -9px;
 }
 
 /*# sourceMappingURL=main.css.map */
