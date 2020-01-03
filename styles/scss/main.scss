@@ -17,20 +17,44 @@
     url(../../fonts/yesevaone.otf) format("opentype");
   // url(../../fonts/FuturaDemiC.eoteot?#iefix) format("embedded-opentype");
 }
-// @font-face {
-//   font-family: FuturaDemiC;
-//   src: url(../../fonts/FuturaDemiC.woff) format("webopen"),
-//     url(../../fonts/FuturaDemiC.ttf) format("truetype"),
-//     url(../../fonts/FuturaDemiC.eoteot?#iefix) format("embedded-opentype");
-// }
-
+@font-face {
+  font-family: ProximaNova;
+  src: url(../../fonts/proximanova.woff) format("webopen"),
+    url(../../fonts/proximanova.ttf) format("truetype"),
+    url(../../fonts/proximanova.eoteot?#iefix) format("embedded-opentype");
+}
+@font-face {
+  font-family: FuturaMediumC;
+  src: url(../../fonts/futuramediumc.woff) format("webopen"),
+    url(../../fonts/futuramediumc.ttf) format("truetype"),
+    url(../../fonts/futuramediumc.eoteot?#iefix) format("embedded-opentype");
+}
 $bg-dark: #131313;
 $colorE3B873: #e3b873;
 $colorWhite: #fff;
 $color363636: #363636;
 $color181818: #181818;
 $color959595: #959595;
+%FBookC15px {
+  font-family: FuturaBookC;
+  font-size: 15px;
+}
+%FBookC20px {
+  font-family: FuturaBookC;
+  font-size: 20px;
+}
+%Yeseva18pxUpp {
+  font-family: YesevaOne, cursive;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+%flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 body {
+  background-color: $colorWhite;
   font-size: 14px;
 }
 a {
@@ -61,57 +85,53 @@ h3 {
 /* header */
 header {
   background: $bg-dark;
+  .container {
+    @extend %flex-center-between;
+    padding: 0 100px;
+    height: 83px;
+    div {
+      @extend %flex-center-between;
+      min-width: 1005px;
+      margin-right: 15px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      min-width: 630px;
+    }
+    li {
+      a {
+        font-family: FuturaBookC;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $colorWhite;
+        cursor: pointer;
+      }
+      a:hover,
+      a:focus,
+      a:active {
+        color: $colorE3B873;
+      }
+    }
+  }
 }
-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1300px;
-  height: 83px;
-  div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 1005px;
-    margin-right: 15px;
-  }
-  ul {
-    display: flex;
-    justify-content: space-around;
-    min-width: 630px;
-  }
-  li {
-    a {
-      font-family: FuturaBookC;
-      line-height: 16px;
-      text-transform: uppercase;
-      color: $colorWhite;
-      cursor: pointer;
-    }
-    a:hover,
-    a:focus,
-    a:active {
-      color: $colorE3B873;
-    }
-  }
-  .call {
-    font-family: FuturaDemiC;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 37px;
-    text-align: center;
-    width: 161px;
-    text-transform: uppercase;
-    color: $colorWhite;
-    border-radius: 2px;
-    border: 1px solid $colorWhite;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-  .call:hover {
-    background: $colorE3B873;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
-  }
+.call {
+  font-family: FuturaDemiC;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 37px;
+  text-align: center;
+  width: 161px;
+  text-transform: uppercase;
+  color: $colorWhite;
+  border-radius: 2px;
+  border: 1px solid $colorWhite;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.call:hover {
+  background: $colorE3B873;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
 }
 .logo,
 .phone {
@@ -152,7 +172,6 @@ header .container {
       line-height: 30px;
       color: $colorWhite;
       white-space: pre-line;
-      margin-top: 15px;
     }
     h1 {
       font-family: YesevaOne, cursive;
@@ -161,6 +180,7 @@ header .container {
       text-transform: uppercase;
       color: $colorWhite;
       white-space: pre-line;
+      margin-bottom: 16px;
       span {
         color: $colorE3B873;
       }
@@ -190,7 +210,8 @@ aside {
 }
 .buttons {
   display: flex;
-  margin-top: 46px;
+  margin-top: 43px;
+  margin-bottom: 20px;
   a {
     border: 1px solid $colorWhite;
     box-sizing: border-box;
@@ -213,23 +234,20 @@ aside {
 /* wr-projects*/
 .wr-projects {
   background-color: $bg-dark;
-}
-.wr-projects .container {
-  display: flex;
-  justify-content: flex-end;
+  .container {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 .sl1 {
   margin-top: 26px;
   span {
-    font-family: YesevaOne;
-    font-size: 18px;
+    @extend %Yeseva18pxUpp;
     line-height: 25px;
-    text-transform: uppercase;
     color: $colorE3B873;
   }
   p {
-    font-family: FuturaBookC;
-    font-size: 15px;
+    @extend %FBookC15px;
     line-height: 24px;
     color: $colorWhite;
   }
@@ -240,13 +258,13 @@ aside {
     margin-right: 68px;
   }
 }
-#slick-slide00 /*как здесь не обратиться к id*/ {
+#slick-slide00 {
   display: flex;
 }
-#slick-slide01 /*как здесь не обратиться к id*/ {
+#slick-slide01 {
   display: flex;
 }
-#slick-slide02 /*как здесь не обратиться к id*/ {
+#slick-slide02 {
   display: flex;
 }
 .block2 {
@@ -256,7 +274,7 @@ aside {
   ul {
     display: flex;
     li {
-      font-family: YesevaOne;
+      font-family: YesevaOne, cursive;
       font-size: 14px;
       line-height: 19px;
       text-transform: uppercase;
@@ -349,7 +367,6 @@ aside {
 }
 /* wr-video */
 .wr-video {
-  background-color: $colorWhite;
   // background-image: url(../../img/vector.svg);
   // background-size: cover;
   .container {
@@ -357,7 +374,6 @@ aside {
     flex-direction: column;
     align-items: center;
     transform: translateY(-326px);
-    // transform: translateY(-3207px);
   }
   h3 {
     color: $colorWhite;
@@ -371,8 +387,7 @@ aside {
     margin-top: 30px;
   }
   p {
-    font-family: FuturaBookC;
-    font-size: 20px;
+    @extend %FBookC20px;
     line-height: 34px;
     text-align: center;
     color: $color363636;
@@ -390,12 +405,10 @@ aside {
     display: block;
   }
   form {
-    display: flex;
+    @extend %flex-center-between;
     flex-direction: column;
-    align-items: center;
     margin-top: 93px;
     min-height: 103px;
-    justify-content: space-between;
     label {
       font-family: FuturaBookC;
       font-size: 16px;
@@ -424,8 +437,7 @@ aside {
         order: 1;
         display: flex;
         flex-direction: column;
-        font-family: FuturaBookC;
-        font-size: 15px;
+        @extend %FBookC15px;
         line-height: 20px;
         color: rgba(54, 54, 54, 0.5);
       }
@@ -453,7 +465,6 @@ aside {
 }
 /* wr-types */
 .wr-types {
-  background-color: $colorWhite;
   // background-image: url(../../img/vector.svg);
   // background-size: cover;
   .container {
@@ -488,39 +499,35 @@ aside {
       padding-top: 22px;
       box-sizing: border-box;
     }
-  }
-  .repair-name {
-    font-family: Yeseva One;
-    font-size: 18px;
-    line-height: 25px;
-    color: $color363636;
-  }
-  ul {
-    font-family: FuturaBookC;
-    font-size: 15px;
-    line-height: 25px;
-    color: $color959595;
-    list-style: disc;
-    margin-left: 16px;
-    margin-top: 6px;
-  }
-  .cost {
-    font-family: Yeseva One;
-    font-size: 18px;
-    line-height: 54px;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #e3b873;
-    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-    width: 228px;
-    height: 54px;
-    transform: translate(-32px, 50%);
-    text-align: center;
+    .repair-name {
+      font-family: Yeseva One;
+      font-size: 18px;
+      line-height: 25px;
+      color: $color363636;
+    }
+    ul {
+      @extend %FBookC15px;
+      line-height: 25px;
+      color: $color959595;
+      list-style: disc;
+      margin-left: 16px;
+      margin-top: 6px;
+    }
+    .cost {
+      @extend %Yeseva18pxUpp;
+      line-height: 54px;
+      color: $colorWhite;
+      background-color: $colorE3B873;
+      box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+      width: 228px;
+      height: 54px;
+      transform: translate(-32px, 50%);
+      text-align: center;
+    }
   }
 }
 /* wr-measurement */
 .wr-measurement {
-  background-color: $colorWhite;
   padding: 80px 0 205px;
   // background-image: url(../../img/vector.svg);
   // background-size: cover;
@@ -540,7 +547,7 @@ aside {
     //   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
     // }
     text {
-      font-family: Yeseva One;
+      font-family: Yeseva One, cursive;
       font-size: 18px;
       line-height: 25px;
       text-align: center;
@@ -559,10 +566,8 @@ aside {
     background-color: #131313;
     width: 506px;
     height: 509px;
-    display: flex;
+    @extend %flex-center-between;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     margin: 0 auto;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     padding: 24px 47px 27px;
@@ -672,7 +677,6 @@ aside {
 }
 /* wr-realization */
 .wr-realization {
-  background-color: $colorWhite;
   .container {
     background: linear-gradient(
         120.96deg,
@@ -742,8 +746,7 @@ aside {
       margin-bottom: 13px;
     }
     > p {
-      font-family: FuturaBookC;
-      font-size: 20px;
+      @extend %FBookC20px;
       line-height: 27px;
       text-align: center;
       color: $color363636;
@@ -764,7 +767,7 @@ aside {
   align-items: center;
   div {
     min-width: 330px;
-    background: #fff;
+    background-color: $colorWhite;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
     transform: translateY(293px);
     padding-left: 32px;
@@ -779,8 +782,7 @@ aside {
     color: $color363636;
   }
   ul {
-    font-family: FuturaBookC;
-    font-size: 15px;
+    @extend %FBookC15px;
     line-height: 25px;
     color: $color959595;
     list-style: disc;
@@ -788,11 +790,9 @@ aside {
     margin-top: 6px;
   }
   .cost {
-    font-family: Yeseva One;
-    font-size: 18px;
+    @extend %Yeseva18pxUpp;
     line-height: 54px;
-    text-transform: uppercase;
-    color: #fff;
+    color: $colorWhite;
     background-color: #e3b873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
     width: 193px;
@@ -809,29 +809,29 @@ aside {
     display: flex;
     justify-content: space-between;
   }
-  .first-flex {
-    min-height: 692px;
-    > p {
-      font-family: FuturaDemiC;
-      font-size: 15px;
-      line-height: 21px;
-      text-transform: uppercase;
-      color: $colorWhite;
-    }
-    h2 {
-      max-width: 160px;
-      position: relative;
-      margin-top: 16px;
-    }
-    h2:after {
-      content: "";
-      width: 92px;
-      height: 1px;
-      background-color: #e3b873;
-      position: absolute;
-      left: 211px;
-      top: 54px;
-    }
+}
+.first-flex {
+  min-height: 692px;
+  > p {
+    font-family: FuturaDemiC;
+    font-size: 15px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: $colorWhite;
+  }
+  h2 {
+    max-width: 160px;
+    position: relative;
+    margin-top: 16px;
+  }
+  h2:after {
+    content: "";
+    width: 92px;
+    height: 1px;
+    background-color: #e3b873;
+    position: absolute;
+    left: 211px;
+    top: 54px;
   }
 }
 .slider-steps {
@@ -839,14 +839,12 @@ aside {
   min-height: 396px;
   margin: 84px 0;
   span {
-    font-family: Yeseva One;
-    font-size: 18px;
+    @extend %Yeseva18pxUpp;
     line-height: 25px;
-    text-transform: uppercase;
     color: $colorWhite;
   }
   p:first-of-type {
-    font-family: Yeseva One;
+    font-family: Yeseva One, cursive;
     font-size: 15px;
     line-height: 23px;
     text-transform: uppercase;
@@ -855,8 +853,7 @@ aside {
     white-space: pre-line;
   }
   p {
-    font-family: FuturaBookC;
-    font-size: 15px;
+    @extend %FBookC15px;
     line-height: 27px;
     color: $colorWhite;
     margin-top: 8px;
@@ -931,15 +928,14 @@ aside {
     border-bottom: solid 1px $colorE3B873;
   }
   p {
-    font-family: FuturaBookC;
-    font-size: 15px;
+    @extend %FBookC15px;
     line-height: 18px;
     color: $colorWhite;
   }
 }
 /* wr-ourteam */
 .wr-ourteam {
-  padding: 94px 0;
+  padding: 94px 0 50px;
   background: linear-gradient(to bottom, #131313 500px, #fff 500px);
   .container {
     display: flex;
@@ -950,8 +946,7 @@ aside {
       margin-bottom: 12px;
     }
     .text1 {
-      font-family: FuturaBookC;
-      font-size: 20px;
+      @extend %FBookC20px;
       line-height: 27px;
       text-align: center;
       color: $colorWhite;
@@ -959,10 +954,9 @@ aside {
       margin-top: 18px;
     }
     a {
-      font-family: Yeseva One;
+      font-family: Yeseva One, cursive;
       font-size: 20px;
       line-height: 28px;
-      text-transform: uppercase;
       color: $color181818;
       cursor: pointer;
       align-self: flex-end;
@@ -982,9 +976,10 @@ aside {
       height: 14px;
       background-repeat: no-repeat;
       position: relative;
-      top: -22px;
-      left: 72px;
+      top: -21px;
+      left: 58px;
       opacity: 0.7;
+      transform: scale(0.7);
     }
   }
 }
@@ -999,11 +994,8 @@ aside {
   position: relative;
   display: flex;
   flex-direction: column;
-  // img:not([class='square']) {
-  //   width: 100%;
-  // }
   p {
-    font-family: Yeseva One;
+    font-family: Yeseva One, cursive;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
@@ -1040,10 +1032,10 @@ aside {
 .square {
   position: absolute;
   transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
 }
 .text2 {
-  font-family: FuturaBookC;
-  font-size: 20px;
+  @extend %FBookC20px;
   line-height: 34px;
   text-align: center;
   color: $color181818;
@@ -1061,4 +1053,283 @@ aside {
   position: relative;
   left: calc(50% - 27px);
   top: -9px;
+}
+/* wr-clients */
+.wr-clients {
+  background-image: url(../../img/wr-reviews.png);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  padding-top: 45px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 998px;
+    h3 {
+      margin-bottom: 12px;
+    }
+    .text1 {
+      @extend %FBookC20px;
+      line-height: 27px;
+      text-align: center;
+      color: $color363636;
+      max-width: 350px;
+      margin-top: 18px;
+    }
+    a {
+      font-family: Yeseva One, cursive;
+      font-size: 20px;
+      line-height: 28px;
+      color: $color181818;
+      cursor: pointer;
+      align-self: flex-end;
+      text-shadow: 0px 3px 10px rgba(160, 122, 61, 0.15);
+      margin-top: 30px;
+      margin-right: 50px;
+    }
+    a:hover,
+    a:focus {
+      color: $colorE3B873;
+    }
+    a:after {
+      content: "";
+      background-image: url(../../img/arrow-slider-black.png);
+      display: block;
+      width: 42px;
+      height: 14px;
+      background-repeat: no-repeat;
+      position: relative;
+      top: -21px;
+      left: 58px;
+      opacity: 0.7;
+      transform: scale(0.7);
+    }
+  }
+}
+.clients-reviews {
+  display: flex;
+  margin-top: 47px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1235px;
+  figure {
+    display: flex;
+    align-items: center;
+    img {
+      border-radius: 50%;
+    }
+    figcaption {
+      font-family: Yeseva One;
+      font-size: 18px;
+      line-height: 23px;
+      color: #181818;
+      max-width: 160px;
+      margin-left: 18px;
+    }
+  }
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background: $colorWhite;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  min-height: 430px;
+  box-sizing: border-box;
+  position: relative;
+  > p {
+    @extend %FBookC15px;
+    line-height: 27px;
+    color: $color959595;
+    max-width: 324px;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    background-color: $colorE3B873;
+    width: 294px;
+    height: 54px;
+    position: absolute;
+    bottom: -25px;
+    left: 0px;
+    p {
+      height: 100%;
+      padding-left: 16px;
+      box-sizing: border-box;
+    }
+    p:first-child {
+      border-right: solid 1px $colorWhite;
+      width: 45%;
+    }
+    span {
+      font-family: Yeseva One, cursive;
+      font-size: 17px;
+      line-height: 54px;
+      text-transform: uppercase;
+      color: $colorWhite;
+      vertical-align: middle;
+    }
+  }
+}
+/* wr-map */
+.wr-map {
+  background: linear-gradient(
+    180deg,
+    rgba(24, 24, 24, 0.9) 3.47%,
+    rgba(24, 24, 24, 0.72) 100%
+  );
+  .container {
+    background-image: url(../../img/wr-map.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    min-height: 954px;
+    padding-bottom: 63px;
+    form {
+      background-color: #131313;
+      width: 883px;
+      height: 445px;
+      @extend %flex-center-between;
+      flex-direction: column;
+      position: absolute;
+      top: -222px;
+      padding: 32px 182px;
+      box-sizing: border-box;
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-self: start;
+        width: 88%;
+      }
+      p {
+        font-family: Yeseva One, cursive;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        max-width: 257px;
+      }
+      label {
+        @extend %FBookC15px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction: column;
+      }
+      label:first-of-type {
+        align-self: flex-start;
+      }
+      > label:last-of-type {
+        flex-direction: row;
+      }
+      > label:last-of-type::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        background-color: #e3b873;
+        border-radius: 1px;
+        background-image: url(../../img/checkbox.png);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      input[type="text"] {
+        font-family: FuturaBookC;
+        font-size: 18px;
+        line-height: 24px;
+        background-color: #131313;
+        order: 2;
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.15);
+        box-sizing: border-box;
+      }
+      input::-webkit-input-placeholder {
+        color: $colorWhite;
+      }
+      input::-moz-placeholder {
+        color: $colorWhite;
+      }
+      input:-moz-placeholder {
+        color: $colorWhite;
+      }
+      input:-ms-input-placeholder {
+        color: $colorWhite;
+      }
+      input::placeholder {
+        color: $colorWhite;
+      }
+      input[type="submit"] {
+        font-family: FuturaDemiC;
+        font-size: 15px;
+        line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        width: 213px;
+        height: 51px;
+        background: #e3b873;
+        box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+        border: none;
+      }
+      input[type="checkbox"] {
+        opacity: 0;
+      }
+    }
+    p {
+      font-family: Yeseva One, cursive;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $colorE3B873;
+      max-width: 589px;
+    }
+    div {
+      margin-top: 22px;
+    }
+    iframe {
+      margin-top: 45px;
+      width: 925px;
+      height: 465px;
+    }
+  }
+}
+/* footer */
+footer {
+  background: $bg-dark;
+  .container {
+    @extend %flex-center-between;
+    padding: 0 107px;
+    height: 133px;
+    div {
+      @extend %flex-center-between;
+      min-width: 1005px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      min-width: 630px;
+    }
+    li {
+      a {
+        font-family: FuturaBookC;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $colorWhite;
+        cursor: pointer;
+      }
+      a:hover,
+      a:focus,
+      a:active {
+        color: $colorE3B873;
+      }
+    }
+  }
 }

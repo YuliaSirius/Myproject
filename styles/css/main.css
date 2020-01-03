@@ -11,7 +11,38 @@
   font-family: YesevaOne;
   src: url(../../fonts/yesevaone.woff) format("webopen"), url(../../fonts/yesevaone.otf) format("opentype");
 }
+@font-face {
+  font-family: ProximaNova;
+  src: url(../../fonts/proximanova.woff) format("webopen"), url(../../fonts/proximanova.ttf) format("truetype"), url(../../fonts/proximanova.eoteot?#iefix) format("embedded-opentype");
+}
+@font-face {
+  font-family: FuturaMediumC;
+  src: url(../../fonts/futuramediumc.woff) format("webopen"), url(../../fonts/futuramediumc.ttf) format("truetype"), url(../../fonts/futuramediumc.eoteot?#iefix) format("embedded-opentype");
+}
+.wr-map .container form label, .review > p, .second-flex p, .slider-steps p, .design-projects ul, .wr-types .repair ul, .wr-video form div label, .sl1 p {
+  font-family: FuturaBookC;
+  font-size: 15px;
+}
+
+.wr-clients .container .text1, .text2, .wr-ourteam .container .text1, .wr-design .container > p, .wr-video p {
+  font-family: FuturaBookC;
+  font-size: 20px;
+}
+
+.slider-steps span, .design-projects .cost, .wr-types .repair .cost, .sl1 span {
+  font-family: YesevaOne, cursive;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+footer .container div, footer .container, .wr-map .container form, .measurer form, .wr-video form, header .container div, header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 body {
+  background-color: #fff;
   font-size: 14px;
 }
 
@@ -48,18 +79,11 @@ h3 {
 header {
   background: #131313;
 }
-
 header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1300px;
+  padding: 0 100px;
   height: 83px;
 }
 header .container div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   min-width: 1005px;
   margin-right: 15px;
 }
@@ -80,7 +104,8 @@ header .container li a:focus,
 header .container li a:active {
   color: #e3b873;
 }
-header .container .call {
+
+.call {
   font-family: FuturaDemiC;
   font-weight: 600;
   font-size: 13px;
@@ -94,7 +119,8 @@ header .container .call {
   box-sizing: border-box;
   cursor: pointer;
 }
-header .container .call:hover {
+
+.call:hover {
   background: #e3b873;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
 }
@@ -137,7 +163,6 @@ header .container .call:hover {
   line-height: 30px;
   color: #fff;
   white-space: pre-line;
-  margin-top: 15px;
 }
 .wr-home .home h1 {
   font-family: YesevaOne, cursive;
@@ -146,6 +171,7 @@ header .container .call:hover {
   text-transform: uppercase;
   color: #fff;
   white-space: pre-line;
+  margin-bottom: 16px;
 }
 .wr-home .home h1 span {
   color: #e3b873;
@@ -175,7 +201,8 @@ aside .link:after {
 
 .buttons {
   display: flex;
-  margin-top: 46px;
+  margin-top: 43px;
+  margin-bottom: 20px;
 }
 .buttons a {
   border: 1px solid #fff;
@@ -200,7 +227,6 @@ aside .link:after {
 .wr-projects {
   background-color: #131313;
 }
-
 .wr-projects .container {
   display: flex;
   justify-content: flex-end;
@@ -210,15 +236,10 @@ aside .link:after {
   margin-top: 26px;
 }
 .sl1 span {
-  font-family: YesevaOne;
-  font-size: 18px;
   line-height: 25px;
-  text-transform: uppercase;
   color: #e3b873;
 }
 .sl1 p {
-  font-family: FuturaBookC;
-  font-size: 15px;
   line-height: 24px;
   color: #fff;
 }
@@ -250,7 +271,7 @@ aside .link:after {
   display: flex;
 }
 .block2 ul li {
-  font-family: YesevaOne;
+  font-family: YesevaOne, cursive;
   font-size: 14px;
   line-height: 19px;
   text-transform: uppercase;
@@ -346,9 +367,6 @@ aside .link:after {
 }
 
 /* wr-video */
-.wr-video {
-  background-color: #fff;
-}
 .wr-video .container {
   display: flex;
   flex-direction: column;
@@ -367,8 +385,6 @@ aside .link:after {
   margin-top: 30px;
 }
 .wr-video p {
-  font-family: FuturaBookC;
-  font-size: 20px;
   line-height: 34px;
   text-align: center;
   color: #363636;
@@ -386,12 +402,9 @@ aside .link:after {
   display: block;
 }
 .wr-video form {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 93px;
   min-height: 103px;
-  justify-content: space-between;
 }
 .wr-video form label {
   font-family: FuturaBookC;
@@ -422,8 +435,6 @@ aside .link:after {
   order: 1;
   display: flex;
   flex-direction: column;
-  font-family: FuturaBookC;
-  font-size: 15px;
   line-height: 20px;
   color: rgba(54, 54, 54, 0.5);
 }
@@ -448,9 +459,6 @@ aside .link:after {
 }
 
 /* wr-types */
-.wr-types {
-  background-color: #fff;
-}
 .wr-types .container {
   display: flex;
   flex-direction: column;
@@ -484,26 +492,21 @@ aside .link:after {
   padding-top: 22px;
   box-sizing: border-box;
 }
-.wr-types .repair-name {
+.wr-types .repair .repair-name {
   font-family: Yeseva One;
   font-size: 18px;
   line-height: 25px;
   color: #363636;
 }
-.wr-types ul {
-  font-family: FuturaBookC;
-  font-size: 15px;
+.wr-types .repair ul {
   line-height: 25px;
   color: #959595;
   list-style: disc;
   margin-left: 16px;
   margin-top: 6px;
 }
-.wr-types .cost {
-  font-family: Yeseva One;
-  font-size: 18px;
+.wr-types .repair .cost {
   line-height: 54px;
-  text-transform: uppercase;
   color: #fff;
   background-color: #e3b873;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
@@ -515,7 +518,6 @@ aside .link:after {
 
 /* wr-measurement */
 .wr-measurement {
-  background-color: #fff;
   padding: 80px 0 205px;
 }
 .wr-measurement .container {
@@ -533,7 +535,7 @@ aside .link:after {
   height: 637px;
 }
 .free-metering svg text {
-  font-family: Yeseva One;
+  font-family: Yeseva One, cursive;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -552,10 +554,7 @@ aside .link:after {
   background-color: #131313;
   width: 506px;
   height: 509px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   margin: 0 auto;
   box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
   padding: 24px 47px 27px;
@@ -664,9 +663,6 @@ aside .link:after {
 }
 
 /* wr-realization */
-.wr-realization {
-  background-color: #fff;
-}
 .wr-realization .container {
   background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)), url(../../img/wr-realization.jpg);
   background-repeat: no-repeat;
@@ -734,8 +730,6 @@ aside .link:after {
   margin-bottom: 13px;
 }
 .wr-design .container > p {
-  font-family: FuturaBookC;
-  font-size: 20px;
   line-height: 27px;
   text-align: center;
   color: #363636;
@@ -757,7 +751,7 @@ aside .link:after {
 }
 .design-projects div {
   min-width: 330px;
-  background: #fff;
+  background-color: #fff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
   transform: translateY(293px);
   padding-left: 32px;
@@ -772,8 +766,6 @@ aside .link:after {
   color: #363636;
 }
 .design-projects ul {
-  font-family: FuturaBookC;
-  font-size: 15px;
   line-height: 25px;
   color: #959595;
   list-style: disc;
@@ -781,10 +773,7 @@ aside .link:after {
   margin-top: 6px;
 }
 .design-projects .cost {
-  font-family: Yeseva One;
-  font-size: 18px;
   line-height: 54px;
-  text-transform: uppercase;
   color: #fff;
   background-color: #e3b873;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
@@ -803,22 +792,23 @@ aside .link:after {
   display: flex;
   justify-content: space-between;
 }
-.wr-steps .first-flex {
+
+.first-flex {
   min-height: 692px;
 }
-.wr-steps .first-flex > p {
+.first-flex > p {
   font-family: FuturaDemiC;
   font-size: 15px;
   line-height: 21px;
   text-transform: uppercase;
   color: #fff;
 }
-.wr-steps .first-flex h2 {
+.first-flex h2 {
   max-width: 160px;
   position: relative;
   margin-top: 16px;
 }
-.wr-steps .first-flex h2:after {
+.first-flex h2:after {
   content: "";
   width: 92px;
   height: 1px;
@@ -834,14 +824,11 @@ aside .link:after {
   margin: 84px 0;
 }
 .slider-steps span {
-  font-family: Yeseva One;
-  font-size: 18px;
   line-height: 25px;
-  text-transform: uppercase;
   color: #fff;
 }
 .slider-steps p:first-of-type {
-  font-family: Yeseva One;
+  font-family: Yeseva One, cursive;
   font-size: 15px;
   line-height: 23px;
   text-transform: uppercase;
@@ -850,8 +837,6 @@ aside .link:after {
   white-space: pre-line;
 }
 .slider-steps p {
-  font-family: FuturaBookC;
-  font-size: 15px;
   line-height: 27px;
   color: #fff;
   margin-top: 8px;
@@ -927,15 +912,13 @@ aside .link:after {
   border-bottom: solid 1px #e3b873;
 }
 .second-flex p {
-  font-family: FuturaBookC;
-  font-size: 15px;
   line-height: 18px;
   color: #fff;
 }
 
 /* wr-ourteam */
 .wr-ourteam {
-  padding: 94px 0;
+  padding: 94px 0 50px;
   background: linear-gradient(to bottom, #131313 500px, #fff 500px);
 }
 .wr-ourteam .container {
@@ -948,8 +931,6 @@ aside .link:after {
   margin-bottom: 12px;
 }
 .wr-ourteam .container .text1 {
-  font-family: FuturaBookC;
-  font-size: 20px;
   line-height: 27px;
   text-align: center;
   color: #fff;
@@ -957,10 +938,9 @@ aside .link:after {
   margin-top: 18px;
 }
 .wr-ourteam .container a {
-  font-family: Yeseva One;
+  font-family: Yeseva One, cursive;
   font-size: 20px;
   line-height: 28px;
-  text-transform: uppercase;
   color: #181818;
   cursor: pointer;
   align-self: flex-end;
@@ -980,9 +960,10 @@ aside .link:after {
   height: 14px;
   background-repeat: no-repeat;
   position: relative;
-  top: -22px;
-  left: 72px;
+  top: -21px;
+  left: 58px;
   opacity: 0.7;
+  transform: scale(0.7);
 }
 
 .team-photo {
@@ -999,7 +980,7 @@ aside .link:after {
   flex-direction: column;
 }
 .foto p {
-  font-family: Yeseva One;
+  font-family: Yeseva One, cursive;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -1036,11 +1017,10 @@ aside .link:after {
 .square {
   position: absolute;
   transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
 }
 
 .text2 {
-  font-family: FuturaBookC;
-  font-size: 20px;
   line-height: 34px;
   text-align: center;
   color: #181818;
@@ -1059,6 +1039,278 @@ aside .link:after {
   position: relative;
   left: calc(50% - 27px);
   top: -9px;
+}
+
+/* wr-clients */
+.wr-clients {
+  background-image: url(../../img/wr-reviews.png);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  padding-top: 45px;
+}
+.wr-clients .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 998px;
+}
+.wr-clients .container h3 {
+  margin-bottom: 12px;
+}
+.wr-clients .container .text1 {
+  line-height: 27px;
+  text-align: center;
+  color: #363636;
+  max-width: 350px;
+  margin-top: 18px;
+}
+.wr-clients .container a {
+  font-family: Yeseva One, cursive;
+  font-size: 20px;
+  line-height: 28px;
+  color: #181818;
+  cursor: pointer;
+  align-self: flex-end;
+  text-shadow: 0px 3px 10px rgba(160, 122, 61, 0.15);
+  margin-top: 30px;
+  margin-right: 50px;
+}
+.wr-clients .container a:hover,
+.wr-clients .container a:focus {
+  color: #e3b873;
+}
+.wr-clients .container a:after {
+  content: "";
+  background-image: url(../../img/arrow-slider-black.png);
+  display: block;
+  width: 42px;
+  height: 14px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -21px;
+  left: 58px;
+  opacity: 0.7;
+  transform: scale(0.7);
+}
+
+.clients-reviews {
+  display: flex;
+  margin-top: 47px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1235px;
+}
+.clients-reviews figure {
+  display: flex;
+  align-items: center;
+}
+.clients-reviews figure img {
+  border-radius: 50%;
+}
+.clients-reviews figure figcaption {
+  font-family: Yeseva One;
+  font-size: 18px;
+  line-height: 23px;
+  color: #181818;
+  max-width: 160px;
+  margin-left: 18px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background: #fff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  min-height: 430px;
+  box-sizing: border-box;
+  position: relative;
+}
+.review > p {
+  line-height: 27px;
+  color: #959595;
+  max-width: 324px;
+}
+.review div {
+  display: flex;
+  align-items: center;
+  background-color: #e3b873;
+  width: 294px;
+  height: 54px;
+  position: absolute;
+  bottom: -25px;
+  left: 0px;
+}
+.review div p {
+  height: 100%;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+.review div p:first-child {
+  border-right: solid 1px #fff;
+  width: 45%;
+}
+.review div span {
+  font-family: Yeseva One, cursive;
+  font-size: 17px;
+  line-height: 54px;
+  text-transform: uppercase;
+  color: #fff;
+  vertical-align: middle;
+}
+
+/* wr-map */
+.wr-map {
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%);
+}
+.wr-map .container {
+  background-image: url(../../img/wr-map.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  min-height: 954px;
+  padding-bottom: 63px;
+}
+.wr-map .container form {
+  background-color: #131313;
+  width: 883px;
+  height: 445px;
+  flex-direction: column;
+  position: absolute;
+  top: -222px;
+  padding: 32px 182px;
+  box-sizing: border-box;
+}
+.wr-map .container form div {
+  display: flex;
+  justify-content: space-between;
+  align-self: start;
+  width: 88%;
+}
+.wr-map .container form p {
+  font-family: Yeseva One, cursive;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  max-width: 257px;
+}
+.wr-map .container form label {
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+.wr-map .container form label:first-of-type {
+  align-self: flex-start;
+}
+.wr-map .container form > label:last-of-type {
+  flex-direction: row;
+}
+.wr-map .container form > label:last-of-type::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-color: #e3b873;
+  border-radius: 1px;
+  background-image: url(../../img/checkbox.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.wr-map .container form input[type=text] {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #131313;
+  order: 2;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+}
+.wr-map .container form input::-webkit-input-placeholder {
+  color: #fff;
+}
+.wr-map .container form input::-moz-placeholder {
+  color: #fff;
+}
+.wr-map .container form input:-moz-placeholder {
+  color: #fff;
+}
+.wr-map .container form input:-ms-input-placeholder {
+  color: #fff;
+}
+.wr-map .container form input::placeholder {
+  color: #fff;
+}
+.wr-map .container form input[type=submit] {
+  font-family: FuturaDemiC;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  width: 213px;
+  height: 51px;
+  background: #e3b873;
+  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+  border: none;
+}
+.wr-map .container form input[type=checkbox] {
+  opacity: 0;
+}
+.wr-map .container p {
+  font-family: Yeseva One, cursive;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e3b873;
+  max-width: 589px;
+}
+.wr-map .container div {
+  margin-top: 22px;
+}
+.wr-map .container iframe {
+  margin-top: 45px;
+  width: 925px;
+  height: 465px;
+}
+
+/* footer */
+footer {
+  background: #131313;
+}
+footer .container {
+  padding: 0 107px;
+  height: 133px;
+}
+footer .container div {
+  min-width: 1005px;
+}
+footer .container ul {
+  display: flex;
+  justify-content: space-around;
+  min-width: 630px;
+}
+footer .container li a {
+  font-family: FuturaBookC;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
+footer .container li a:hover,
+footer .container li a:focus,
+footer .container li a:active {
+  color: #e3b873;
 }
 
 /*# sourceMappingURL=main.css.map */
