@@ -1,15 +1,15 @@
 @import "reset.css";
 @font-face {
   font-family: FuturaDemiC;
-  src: url(../../fonts/futurademic.woff) format("webopen"),
-    url(../../fonts/futurademic.ttf) format("truetype"),
-    url(../../fonts/futurademic.eoteot?#iefix) format("embedded-opentype");
+  src: url(../../fonts/futdemic.woff) format("webopen"),
+    url(../../fonts/futdemic.ttf) format("truetype"),
+    url(../../fonts/futdemic.eoteot?#iefix) format("embedded-opentype");
 }
 @font-face {
   font-family: FuturaBookC;
-  src: url(../../fonts/futurabookc.woff) format("webopen"),
-    url(../../fonts/futurabookc.ttf) format("truetype"),
-    url(../../fonts/futurabookc.eoteot?#iefix) format("embedded-opentype");
+  src: url(../../fonts/futbookc.woff) format("webopen"),
+    url(../../fonts/futbookc.ttf) format("truetype"),
+    url(../../fonts/futbookc.eoteot?#iefix) format("embedded-opentype");
 }
 @font-face {
   font-family: YesevaOne;
@@ -25,9 +25,9 @@
 }
 @font-face {
   font-family: FuturaMediumC;
-  src: url(../../fonts/futuramediumc.woff) format("webopen"),
-    url(../../fonts/futuramediumc.ttf) format("truetype"),
-    url(../../fonts/futuramediumc.eoteot?#iefix) format("embedded-opentype");
+  src: url(../../fonts/futmediumc.woff) format("webopen"),
+    url(../../fonts/futmediumc.ttf) format("truetype"),
+    url(../../fonts/futmediumc.eoteot?#iefix) format("embedded-opentype");
 }
 $bg-dark: #131313;
 $colorE3B873: #e3b873;
