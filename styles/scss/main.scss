@@ -14,8 +14,8 @@
 @font-face {
   font-family: YesevaOne;
   src: url(../../fonts/yesevaone.woff) format("webopen"),
-    url(../../fonts/yesevaone.otf) format("opentype");
-  // url(../../fonts/FuturaDemiC.eoteot?#iefix) format("embedded-opentype");
+    url(../../fonts/yesevaone.otf) format("opentype"),
+  url(../../fonts/yesevaone.eoteot?#iefix) format("embedded-opentype");
 }
 @font-face {
   font-family: ProximaNova;
