@@ -15,7 +15,7 @@
   font-family: YesevaOne;
   src: url(../../fonts/yesevaone.woff) format("webopen"),
     url(../../fonts/yesevaone.otf) format("opentype"),
-  url(../../fonts/yesevaone.eoteot?#iefix) format("embedded-opentype");
+    url(../../fonts/yesevaone.eoteot?#iefix) format("embedded-opentype");
 }
 @font-face {
   font-family: ProximaNova;
@@ -416,14 +416,18 @@ aside {
       color: #181818;
       display: flex;
       flex-direction: row;
+      cursor: pointer;
     }
-    > label::before {
+    input[type="checkbox"] + label[for="check"]:before {
       content: "";
       width: 18px;
       height: 18px;
       display: inline-block;
-      background-color: #e3b873;
+      background-color: $colorE3B873;
       border-radius: 1px;
+      margin-right: 10px;
+    }
+    input[type="checkbox"]:checked + label[for="check"]:before {
       background-image: url(../../img/checkbox.png);
       background-repeat: no-repeat;
       background-position: center;
@@ -433,6 +437,7 @@ aside {
       justify-content: space-between;
       min-width: 815px;
       label {
+        color: rgba(54, 54, 54, 0.5);
         margin: 0 25px;
         order: 1;
         display: flex;
@@ -449,8 +454,45 @@ aside {
       box-sizing: border-box;
       order: 2;
       height: 28px;
+      cursor: pointer;
+    }
+    input::-webkit-input-placeholder {
+      font-family: FuturaBookC;
+      font-size: 18px;
+      line-height: 24px;
+      color: $color363636;
+    }
+    input::-moz-placeholder {
+      font-family: FuturaBookC;
+      font-size: 18px;
+      line-height: 24px;
+      color: $color363636;
+    }
+    input:-moz-placeholder {
+      font-family: FuturaBookC;
+      font-size: 18px;
+      line-height: 24px;
+      color: $color363636;
+    }
+    input:-ms-input-placeholder {
+      font-family: FuturaBookC;
+      font-size: 18px;
+      line-height: 24px;
+      color: $color363636;
+    }
+    input::placeholder {
+      font-family: FuturaBookC;
+      font-size: 18px;
+      line-height: 24px;
+      color: $color363636;
     }
     input[type="submit"] {
+      font-family: FuturaDemiC;
+      font-size: 15px;
+      line-height: 26px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $colorWhite;
       width: 200px;
       height: 51px;
       background-color: $colorE3B873;
@@ -459,7 +501,7 @@ aside {
       border: none;
     }
     input[type="checkbox"] {
-      opacity: 0;
+      display: none;
     }
   }
 }
@@ -588,8 +630,9 @@ aside {
       display: flex;
       flex-direction: column;
       width: 100%;
+      cursor: pointer;
     }
-    label:last-of-type {
+    label[for="checkk"] {
       flex-direction: row;
     }
     input[type="text"] {
@@ -603,6 +646,7 @@ aside {
       border-color: rgba(255, 255, 255, 0.15);
       box-sizing: border-box;
       min-width: 90%;
+      cursor: pointer;
     }
     input::-webkit-input-placeholder {
       color: $colorWhite;
@@ -633,15 +677,18 @@ aside {
       transform: translateX(45%);
     }
     input[type="checkbox"] {
-      opacity: 0;
+      display: none;
     }
-    label:last-of-type::before {
+    input[type="checkbox"] + label[for="checkk"]:before {
       content: "";
       width: 18px;
       height: 18px;
       display: inline-block;
       background-color: $colorE3B873;
       border-radius: 1px;
+      margin-right: 10px;
+    }
+    input[type="checkbox"]:checked + label[for="checkk"]:before {
       background-image: url(../../img/checkbox.png);
       background-repeat: no-repeat;
       background-position: center;
@@ -915,6 +962,7 @@ aside {
   li {
     opacity: 0.3;
     min-width: 120px;
+    cursor: pointer;
   }
   li:hover {
     opacity: 1;
@@ -1221,23 +1269,30 @@ aside {
         color: rgba(255, 255, 255, 0.5);
         display: flex;
         flex-direction: column;
+        cursor: pointer;
       }
       label:first-of-type {
         align-self: flex-start;
       }
-      > label:last-of-type {
+      label[for="checkkk"] {
         flex-direction: row;
       }
-      > label:last-of-type::before {
+      input[type="checkbox"] + label[for="checkkk"]:before {
         content: "";
         width: 18px;
         height: 18px;
         display: inline-block;
-        background-color: #e3b873;
+        background-color: $colorE3B873;
         border-radius: 1px;
+        margin-right: 10px;
+      }
+      input[type="checkbox"]:checked + label[for="checkkk"]:before {
         background-image: url(../../img/checkbox.png);
         background-repeat: no-repeat;
         background-position: center;
+      }
+      input[type="checkbox"] {
+        display: none;
       }
       input[type="text"] {
         font-family: FuturaBookC;
@@ -1249,6 +1304,7 @@ aside {
         border-style: solid;
         border-color: rgba(255, 255, 255, 0.15);
         box-sizing: border-box;
+        cursor: pointer;
       }
       input::-webkit-input-placeholder {
         color: $colorWhite;
@@ -1278,9 +1334,6 @@ aside {
         box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
         border: none;
       }
-      input[type="checkbox"] {
-        opacity: 0;
-      }
     }
     p {
       font-family: Yeseva One, cursive;
@@ -1293,6 +1346,10 @@ aside {
     }
     div {
       margin-top: 22px;
+      img {
+        cursor: pointer;
+        margin: 0 5px;
+      }
     }
     iframe {
       margin-top: 45px;

@@ -413,14 +413,18 @@ aside .link:after {
   color: #181818;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
-.wr-video form > label::before {
+.wr-video form input[type=checkbox] + label[for=check]:before {
   content: "";
   width: 18px;
   height: 18px;
   display: inline-block;
   background-color: #e3b873;
   border-radius: 1px;
+  margin-right: 10px;
+}
+.wr-video form input[type=checkbox]:checked + label[for=check]:before {
   background-image: url(../../img/checkbox.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -431,6 +435,7 @@ aside .link:after {
   min-width: 815px;
 }
 .wr-video form div label {
+  color: rgba(54, 54, 54, 0.5);
   margin: 0 25px;
   order: 1;
   display: flex;
@@ -445,8 +450,45 @@ aside .link:after {
   box-sizing: border-box;
   order: 2;
   height: 28px;
+  cursor: pointer;
+}
+.wr-video form input::-webkit-input-placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+.wr-video form input::-moz-placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+.wr-video form input:-moz-placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+.wr-video form input:-ms-input-placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+.wr-video form input::placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
 }
 .wr-video form input[type=submit] {
+  font-family: FuturaDemiC;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
   width: 200px;
   height: 51px;
   background-color: #e3b873;
@@ -455,7 +497,7 @@ aside .link:after {
   border: none;
 }
 .wr-video form input[type=checkbox] {
-  opacity: 0;
+  display: none;
 }
 
 /* wr-types */
@@ -576,8 +618,9 @@ aside .link:after {
   display: flex;
   flex-direction: column;
   width: 100%;
+  cursor: pointer;
 }
-.measurer form label:last-of-type {
+.measurer form label[for=checkk] {
   flex-direction: row;
 }
 .measurer form input[type=text] {
@@ -591,6 +634,7 @@ aside .link:after {
   border-color: rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   min-width: 90%;
+  cursor: pointer;
 }
 .measurer form input::-webkit-input-placeholder {
   color: #fff;
@@ -621,15 +665,18 @@ aside .link:after {
   transform: translateX(45%);
 }
 .measurer form input[type=checkbox] {
-  opacity: 0;
+  display: none;
 }
-.measurer form label:last-of-type::before {
+.measurer form input[type=checkbox] + label[for=checkk]:before {
   content: "";
   width: 18px;
   height: 18px;
   display: inline-block;
   background-color: #e3b873;
   border-radius: 1px;
+  margin-right: 10px;
+}
+.measurer form input[type=checkbox]:checked + label[for=checkk]:before {
   background-image: url(../../img/checkbox.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -899,6 +946,7 @@ aside .link:after {
 .second-flex li {
   opacity: 0.3;
   min-width: 120px;
+  cursor: pointer;
 }
 .second-flex li:hover {
   opacity: 1;
@@ -1206,23 +1254,30 @@ aside .link:after {
   color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .wr-map .container form label:first-of-type {
   align-self: flex-start;
 }
-.wr-map .container form > label:last-of-type {
+.wr-map .container form label[for=checkkk] {
   flex-direction: row;
 }
-.wr-map .container form > label:last-of-type::before {
+.wr-map .container form input[type=checkbox] + label[for=checkkk]:before {
   content: "";
   width: 18px;
   height: 18px;
   display: inline-block;
   background-color: #e3b873;
   border-radius: 1px;
+  margin-right: 10px;
+}
+.wr-map .container form input[type=checkbox]:checked + label[for=checkkk]:before {
   background-image: url(../../img/checkbox.png);
   background-repeat: no-repeat;
   background-position: center;
+}
+.wr-map .container form input[type=checkbox] {
+  display: none;
 }
 .wr-map .container form input[type=text] {
   font-family: FuturaBookC;
@@ -1234,6 +1289,7 @@ aside .link:after {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
+  cursor: pointer;
 }
 .wr-map .container form input::-webkit-input-placeholder {
   color: #fff;
@@ -1263,9 +1319,6 @@ aside .link:after {
   box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
   border: none;
 }
-.wr-map .container form input[type=checkbox] {
-  opacity: 0;
-}
 .wr-map .container p {
   font-family: Yeseva One, cursive;
   font-size: 20px;
@@ -1277,6 +1330,10 @@ aside .link:after {
 }
 .wr-map .container div {
   margin-top: 22px;
+}
+.wr-map .container div img {
+  cursor: pointer;
+  margin: 0 5px;
 }
 .wr-map .container iframe {
   margin-top: 45px;
