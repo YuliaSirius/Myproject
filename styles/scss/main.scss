@@ -381,11 +381,30 @@ aside {
   img {
     margin-top: 12px;
   }
+  div {
+    width: max-content;
+    position: relative;
+  }
   video {
     width: 817px;
     height: 434px;
     margin-top: 30px;
   }
+  #play {
+    position: absolute;
+    top: calc(53% - 43px);
+    left: calc(50% - 43px);
+    width: 85px;
+    height: 85px;
+    background: #e3b873;
+    box-shadow: 0px 5px 30px rgba(227, 184, 115, 0.2);
+    border-radius: 50%;
+    border: none;
+    img {
+      transform: translate(3px,-5px);
+    }
+  }
+
   p {
     @extend %FBookC20px;
     line-height: 34px;

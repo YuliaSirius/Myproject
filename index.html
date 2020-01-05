@@ -108,10 +108,13 @@
     <div class="container">
       <h3>online control</h3>
       <img src="./img/camera.png" alt="camera">
-      <video controls="controls" poster="./img/poster.jpg">
-        <source src="./img/video.mp4" type='video/mp4'>
-        Элемент video не поддерживается вашим браузером.
-      </video>
+      <div>
+        <video id="Video1" controls="controls" poster="./img/poster.jpg">
+          <source src="./img/video.mp4" type='video/mp4'>
+          Элемент video не поддерживается вашим браузером.
+        </video>
+        <button id="play" onclick="vidplay()"><img src="./img/buttonvideo.png" alt="play"></button>
+      </div>
       <p>At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you
         can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast
         from one of our facilities!<br>
