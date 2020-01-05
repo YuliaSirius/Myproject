@@ -89,8 +89,6 @@ header {
     @extend %flex-center-between;
     padding: 0 113px 0 96px;
     height: 83px;
-    border: solid 3px red;
-    box-sizing: border-box;
     div {
       @extend %flex-center-between;
       max-width: 981px;
@@ -1466,7 +1464,7 @@ footer {
   .logo {
     font-size: 12px;
     line-height: 14px;
-min-width: 160px;
+    min-width: 160px;
     margin: 0;
   }
   .phone {

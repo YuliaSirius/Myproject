@@ -82,8 +82,6 @@ header {
 header .container {
   padding: 0 113px 0 96px;
   height: 83px;
-  border: solid 3px red;
-  box-sizing: border-box;
 }
 header .container div {
   max-width: 981px;
