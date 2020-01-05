@@ -1,7 +1,7 @@
 @import "reset.css";
 @font-face {
   font-family: FuturaDemiC;
-  src: url(../../fonts/FuturaDemiC.woff) format("webopen"), url(../../fonts/FuturaDemiC.ttf) format("truetype"), url(../../fonts/FuturaDemiC.eoteot?#iefix) format("embedded-opentype");
+  src: url(../../fonts/futdemic.woff) format("webopen"), url(../../fonts/futmediumc.ttf) format("truetype"), url(../../fonts/futmediumc.eoteot?#iefix) format("embedded-opentype");
 }
 body {
   font-size: 14px;
@@ -32,7 +32,7 @@ header li a {
   color: #fff;
   margin-left: 48px;
 }
-header li a:hover, header a:focus, header a:active {
+header li a:hover, header a:focus, header .active {
   color: #e3b873;
 }
 

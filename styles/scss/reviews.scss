@@ -36,7 +36,7 @@ header {
     color: $colorWhite;
     margin-left: 48px;
   }
-  li a:hover, a:focus, a:active {
+  li a:hover, a:focus, .active {
     color: $colorE3B873;
   }
 }

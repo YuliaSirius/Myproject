@@ -59,6 +59,19 @@ a {
   box-sizing: border-box;
 }
 
+h1 {
+  font-family: YesevaOne, cursive;
+  font-size: 40px;
+  line-height: 53px;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: pre-line;
+  margin-bottom: 16px;
+}
+h1 span {
+  color: #e3b873;
+}
+
 h2 {
   font-family: YesevaOne;
   font-size: 27px;
@@ -84,11 +97,9 @@ header .container {
   height: 83px;
 }
 header .container div {
-  max-width: 981px;
   width: 100%;
 }
 header .container div nav {
-  max-width: 582px;
   width: 100%;
 }
 header .container ul {
@@ -104,7 +115,7 @@ header .container li a {
 }
 header .container li a:hover,
 header .container li a:focus,
-header .container li a:active {
+header .container li .active {
   color: #e3b873;
 }
 
@@ -138,7 +149,6 @@ header .container li a:active {
 }
 
 .logo {
-  min-width: 86px;
   margin-right: 10px;
 }
 
@@ -146,10 +156,71 @@ header .container li a:active {
   display: inline-block;
   border-bottom: solid 1px;
   color: #e3b873;
-  min-width: 120px;
   margin: 0 10px 0 40px;
 }
 
+@media all and (max-width: 1080px) {
+  header .container {
+    padding: 0 40px;
+  }
+}
+@media all and (max-width: 970px) {
+  header .container {
+    padding: 0 20px;
+  }
+
+  .phone {
+    margin: 0 10px 0 20px;
+  }
+}
+@media all and (max-width: 890px) {
+  header .container div nav {
+    display: none;
+  }
+
+  header .container div {
+    justify-content: flex-end;
+  }
+
+  header .container {
+    padding: 0 40px;
+  }
+
+  .phone {
+    margin: 0 30px;
+  }
+}
+@media all and (max-width: 500px) {
+  .phone {
+    margin: 0 10px;
+  }
+
+  header .container {
+    padding: 0 18px;
+  }
+}
+@media all and (max-width: 440px) {
+  header .container {
+    height: 57px;
+  }
+
+  .call {
+    display: none;
+  }
+
+  .logo {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+  }
+
+  .phone {
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    margin: 0;
+  }
+}
 /* wr-home */
 .wr-home {
   background: #131313;
@@ -161,7 +232,7 @@ header .container li a:active {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../img/wr-repair.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../img/wr-repair.jpg);
   background-size: cover;
   width: 100%;
   min-height: 707px;
@@ -173,18 +244,7 @@ header .container li a:active {
   line-height: 30px;
   color: #fff;
   white-space: pre-line;
-}
-.wr-home .home h1 {
-  font-family: YesevaOne, cursive;
-  font-size: 40px;
-  line-height: 53px;
-  text-transform: uppercase;
-  color: #fff;
-  white-space: pre-line;
-  margin-bottom: 16px;
-}
-.wr-home .home h1 span {
-  color: #e3b873;
+  margin-bottom: 43px;
 }
 
 aside {
@@ -197,8 +257,10 @@ aside .link {
   line-height: 16px;
   color: #e3b873;
   text-transform: uppercase;
-  transform: rotate(90deg) translateX(340%);
   display: inline-block;
+  position: relative;
+  top: 37%;
+  transform: rotate(90deg);
 }
 aside .link:after {
   content: "";
@@ -211,7 +273,6 @@ aside .link:after {
 
 .buttons {
   display: flex;
-  margin-top: 43px;
   margin-bottom: 20px;
 }
 .buttons a {
@@ -233,9 +294,72 @@ aside .link:after {
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
 }
 
+@media all and (max-width: 690px) {
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  h1 {
+    white-space: normal;
+  }
+  h1 span {
+    display: block;
+  }
+
+  .wr-home .home {
+    padding: 0 15px;
+  }
+}
+@media all and (max-width: 570px) {
+  .wr-home .home p {
+    white-space: normal;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons a {
+    margin-bottom: 26px;
+  }
+}
+@media all and (max-width: 460px) {
+  h1 {
+    font-size: 23px;
+    line-height: 31px;
+  }
+
+  .wr-home .home {
+    min-height: 476px;
+  }
+
+  .wr-home .home p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons a {
+    margin-bottom: 26px;
+  }
+}
+@media all and (max-width: 440px) {
+  .buttons a {
+    width: 339px;
+    line-height: 51px;
+    margin-bottom: 26px;
+  }
+
+  aside {
+    display: none;
+  }
+}
 /* wr-projects*/
 .wr-projects {
   background-color: #131313;
+  padding: 104px 0 292px 0;
 }
 .wr-projects .container {
   display: flex;
@@ -275,7 +399,6 @@ aside .link:after {
 .block2 {
   display: flex;
   flex-direction: column;
-  margin: 104px 0 416px 0;
 }
 .block2 ul {
   display: flex;
@@ -327,21 +450,20 @@ aside .link:after {
 .block1 {
   width: 492px;
   position: relative;
+  padding-top: 70px;
 }
 .block1 h2 {
   letter-spacing: -2px;
   max-width: 150px;
-  display: inline-block;
-  margin-top: 172px;
 }
 .block1 h2:after {
-  top: 226px;
   content: "";
   width: 92px;
   height: 1px;
   background-color: #e3b873;
   position: absolute;
   left: 161px;
+  top: 125px;
 }
 .block1 p {
   font-family: FuturaBookC;
@@ -1394,73 +1516,8 @@ footer .container li a {
 }
 footer .container li a:hover,
 footer .container li a:focus,
-footer .container li a:active {
+footer .container li .active {
   color: #e3b873;
-}
-
-@media all and (max-width: 1080px) {
-  header .container {
-    padding: 0 40px;
-  }
-}
-@media all and (max-width: 970px) {
-  header .container {
-    padding: 0 20px;
-  }
-
-  .phone {
-    margin: 0 10px 0 20px;
-  }
-}
-@media all and (max-width: 890px) {
-  header .container div nav {
-    display: none;
-  }
-
-  header .container div {
-    justify-content: flex-end;
-  }
-
-  header .container {
-    padding: 0 40px;
-  }
-
-  .phone {
-    margin: 0 30px;
-  }
-}
-@media all and (max-width: 500px) {
-  .phone {
-    margin: 0 10px;
-  }
-
-  header .container {
-    padding: 0 18px;
-  }
-}
-@media all and (max-width: 440px) {
-  header .container {
-    height: 57px;
-  }
-
-  .call {
-    display: none;
-  }
-
-  .logo {
-    font-size: 12px;
-    line-height: 14px;
-    min-width: 160px;
-    margin: 0;
-  }
-
-  .phone {
-    font-size: 12px;
-    line-height: 14px;
-    color: #fff;
-    min-width: 100px;
-    margin: 0;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
