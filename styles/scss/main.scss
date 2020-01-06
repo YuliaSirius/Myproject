@@ -356,30 +356,39 @@ aside {
 
 /* wr-projects*/
 .wr-projects {
-  background-color: $bg-dark;
-  padding: 104px 0 292px 0;
+  background-image: url(../../img/wr-reviews.png);
+  background-size: 30%;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-color: #131313;
+  padding-top: 105px;
+  min-height: 970px;
   .container {
     display: flex;
     justify-content: flex-end;
   }
 }
+.slider1 {
+  margin-top: 47px;
+  width: 380px;
+}
 .sl1 {
-  margin-top: 26px;
   span {
     @extend %Yeseva18pxUpp;
     line-height: 25px;
     color: $colorE3B873;
   }
-  p {
+  li {
     @extend %FBookC15px;
     line-height: 24px;
     color: $colorWhite;
+    float: left;
+    width: 50%;
+    height: 50%;
   }
-  .cost {
-    margin-top: 46px;
-  }
-  .column1 {
-    margin-right: 68px;
+  ul {
+ 
+    height: 210px;
   }
 }
 #slick-slide00 {
@@ -423,10 +432,14 @@ aside {
   .slick-next {
     right: 65px;
   }
+  .slick-prev {
+   left: 40px;
+   z-index: 2;
+  }
   .slick-next:hover {
     cursor: pointer;
   }
-  .slick-next:before {
+  .slick-next:before, .slick-prev:before {
     content: "";
     background: url(../../img/arrow.png);
     background-size: 60%;
@@ -438,6 +451,12 @@ aside {
     background-repeat: no-repeat;
     background-position: 55% 60%;
     box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+  }
+  .slick-prev:before {
+    transform: rotate(180deg);
+  }
+  .slick-disabled::before {
+    opacity: 0;
   }
 }
 .block1 {
@@ -466,19 +485,49 @@ aside {
     max-width: 440px;
   }
 }
-.slider1 .slick-dots li {
-  left: -137px;
-  bottom: 110px;
-  button {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 30px;
-    height: 0;
-    width: 0;
+.slider1 {
+  .slick-dots:before {
+    content: "";
+    background-image: url(../../img/arrow-slider.png);
+    display: block;
+    width: 42px;
+    height: 14px;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    position: relative;
+    top: 18px;
+    left: -64px;
   }
-  button:hover,
-  button:focus,
-  button:active {
-    background-color: $colorWhite;
+  .slick-dots:after {
+    content: "";
+    background-image: url(../../img/arrow-slider.png);
+    display: block;
+    width: 42px;
+    height: 14px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -22px;
+    left: 100px;
+  }
+  .slick-dots {
+    width: auto;
+    transform: translate(65px, 42px);
+    button {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 30px;
+      height: 0;
+      width: 0;
+    }
+    .slick-active {
+      button {
+        background: rgba(255, 255, 255, 1);
+      }
+    }
+    button:hover,
+    button:focus,
+    button:active {
+      background-color: $colorWhite;
+    }
   }
 }
 .slider1 .slick-dots li button::before {
@@ -1047,23 +1096,30 @@ aside {
     margin-top: 8px;
     padding: 0 2px;
   }
-  .slick-dots li {
-    width: 27px;
-    margin: 0;
-    button {
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 30px;
-      height: 10px;
-      width: 10px;
+  .slick-dots {
+    .slick-active {
+      button {
+        background: rgba(255, 255, 255, 1);
+      }
     }
-    button:hover,
-    button:focus,
-    button:active {
-      background-color: $colorWhite;
+    li {
+      width: 27px;
+      margin: 0;
+      button {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        height: 10px;
+        width: 10px;
+      }
+      button:hover,
+      button:focus,
+      button:active {
+        background-color: $colorWhite;
+      }
+      button::before {
+        content: none;
+      }
     }
-  }
-  .slick-dots li button::before {
-    content: none;
   }
   .slick-dots:after {
     content: "";
