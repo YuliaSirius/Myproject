@@ -157,7 +157,7 @@ header {
   color: $colorE3B873;
 }
 .logo {
-  // min-width: 86px;
+  min-width: 180px;
   margin-right: 10px;
 }
 .phone {
@@ -387,7 +387,6 @@ aside {
     height: 50%;
   }
   ul {
- 
     height: 210px;
   }
 }
@@ -433,13 +432,14 @@ aside {
     right: 65px;
   }
   .slick-prev {
-   left: 40px;
-   z-index: 2;
+    left: 40px;
+    z-index: 2;
   }
   .slick-next:hover {
     cursor: pointer;
   }
-  .slick-next:before, .slick-prev:before {
+  .slick-next:before,
+  .slick-prev:before {
     content: "";
     background: url(../../img/arrow.png);
     background-size: 60%;
@@ -486,29 +486,6 @@ aside {
   }
 }
 .slider1 {
-  .slick-dots:before {
-    content: "";
-    background-image: url(../../img/arrow-slider.png);
-    display: block;
-    width: 42px;
-    height: 14px;
-    background-repeat: no-repeat;
-    transform: rotate(180deg);
-    position: relative;
-    top: 18px;
-    left: -64px;
-  }
-  .slick-dots:after {
-    content: "";
-    background-image: url(../../img/arrow-slider.png);
-    display: block;
-    width: 42px;
-    height: 14px;
-    background-repeat: no-repeat;
-    position: relative;
-    top: -22px;
-    left: 100px;
-  }
   .slick-dots {
     width: auto;
     transform: translate(65px, 42px);
@@ -529,6 +506,38 @@ aside {
       background-color: $colorWhite;
     }
   }
+  .slick-next:before {
+    content: "";
+    background-image: url(../../img/arrow-slider.png);
+    display: block;
+    width: 42px;
+    height: 14px;
+    background-repeat: no-repeat;
+  }
+  .slick-prev:before {
+    content: "";
+    background-image: url(../../img/arrow-slider.png);
+    display: block;
+    width: 42px;
+    height: 14px;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+  }
+  .slick-disabled::before {
+    opacity: 0;
+  }
+  .slick-prev,
+  .slick-next {
+    bottom: -72px;
+    top: auto;
+    z-index: 2;
+  }
+  .slick-next {
+    right: 185px;
+  }
+  .slick-prev {
+    left: -4px;
+  }
 }
 .slider1 .slick-dots li button::before {
   content: none;
@@ -540,11 +549,20 @@ aside {
 .wr-video {
   // background-image: url(../../img/vector.svg);
   // background-size: cover;
+  min-height: 776px;
+  display: flex;
+  justify-content: center;
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     transform: translateY(-326px);
+    position: absolute;
+    > div {
+      width: max-content;
+      position: relative;
+      margin-top: 30px;
+    }
   }
   h3 {
     color: $colorWhite;
@@ -552,18 +570,14 @@ aside {
   img {
     margin-top: 12px;
   }
-  div {
-    width: max-content;
-    position: relative;
-  }
+
   video {
     width: 817px;
     height: 434px;
-    margin-top: 30px;
   }
   #play {
     position: absolute;
-    top: calc(53% - 43px);
+    top: calc(50% - 43px);
     left: calc(50% - 43px);
     width: 85px;
     height: 85px;
@@ -575,14 +589,13 @@ aside {
       transform: translate(3px, -5px);
     }
   }
-
   p {
     @extend %FBookC20px;
     line-height: 34px;
     text-align: center;
     color: $color363636;
     max-width: 675px;
-    margin-top: 92px;
+    margin-top: 86px;
   }
   p:before {
     content: "";
@@ -590,7 +603,7 @@ aside {
     height: 2px;
     background-color: #e3b873;
     position: relative;
-    left: 46%;
+    margin: 0 auto;
     top: -28px;
     display: block;
   }
@@ -644,7 +657,6 @@ aside {
       box-sizing: border-box;
       order: 2;
       height: 28px;
-      cursor: pointer;
     }
     input::-webkit-input-placeholder {
       font-family: FuturaBookC;
@@ -679,7 +691,6 @@ aside {
     input[type="submit"] {
       font-family: FuturaDemiC;
       font-size: 15px;
-      line-height: 26px;
       text-align: center;
       text-transform: uppercase;
       color: $colorWhite;
@@ -703,7 +714,6 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -182px;
   }
   h3 {
     color: $color181818;
@@ -726,7 +736,7 @@ aside {
       min-height: 286px;
       background: $colorWhite;
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-      transform: translateY(-44%);
+      transform: translateY(-127px);
       padding-left: 32px;
       padding-top: 22px;
       box-sizing: border-box;
@@ -792,8 +802,7 @@ aside {
   }
 }
 .measurer {
-  margin-right: 98px;
-  padding: 51px 0;
+  padding: 51px 98px 51px 0;
   form {
     background-color: #131313;
     width: 506px;
@@ -804,7 +813,7 @@ aside {
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     padding: 24px 47px 27px;
     box-sizing: border-box;
-    p {
+    h4 {
       font-family: FuturaDemiC;
       font-size: 20px;
       line-height: 25px;
@@ -836,7 +845,7 @@ aside {
       border-color: rgba(255, 255, 255, 0.15);
       box-sizing: border-box;
       min-width: 90%;
-      cursor: pointer;
+      color: white;
     }
     input::-webkit-input-placeholder {
       color: $colorWhite;
@@ -972,8 +981,7 @@ aside {
 /* design */
 .wr-design {
   background: linear-gradient(to top, #131313 40.5%, #fff 40.5%);
-  padding: 152px;
-  min-height: 740px;
+  padding-top: 152px;
   .container {
     display: flex;
     flex-direction: column;
@@ -1002,15 +1010,16 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: -126px;
   div {
     min-width: 330px;
     background-color: $colorWhite;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-    transform: translateY(293px);
+    transform: translateY(-126px);
     padding-left: 32px;
     padding-top: 22px;
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
   }
   .design-name {
     font-family: Yeseva One;
@@ -1121,18 +1130,15 @@ aside {
       }
     }
   }
-  .slick-dots:after {
+  .slick-next:before {
     content: "";
     background-image: url(../../img/arrow-slider.png);
     display: block;
     width: 42px;
     height: 14px;
     background-repeat: no-repeat;
-    position: relative;
-    top: -22px;
-    left: 260px;
   }
-  .slick-dots:before {
+  .slick-prev:before {
     content: "";
     background-image: url(../../img/arrow-slider.png);
     display: block;
@@ -1140,8 +1146,21 @@ aside {
     height: 14px;
     background-repeat: no-repeat;
     transform: rotate(180deg);
-    position: relative;
-    top: 18px;
+  }
+  .slick-disabled::before {
+    opacity: 0;
+  }
+  .slick-prev,
+  .slick-next {
+    bottom: -30px;
+    top: auto;
+    z-index: 2;
+  }
+  .slick-next {
+    right: 42px;
+  }
+  .slick-prev {
+    left: 4px;
   }
 }
 .second-flex {
@@ -1501,7 +1520,7 @@ aside {
         border-style: solid;
         border-color: rgba(255, 255, 255, 0.15);
         box-sizing: border-box;
-        cursor: pointer;
+        color: white;
       }
       input::-webkit-input-placeholder {
         color: $colorWhite;
