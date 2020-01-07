@@ -99,15 +99,13 @@ header {
   background: $bg-dark;
   .container {
     @extend %flex-center-between;
-    padding: 0 113px 0 96px;
+    padding: 0 116px 0 96px;
     height: 83px;
     div {
       @extend %flex-center-between;
-      // max-width: 981px;
-      width: 100%;
+      flex-grow: 2.4;
       nav {
-        // max-width: 582px;
-        width: 100%;
+        flex-grow: 1;
       }
     }
     ul {
@@ -136,7 +134,7 @@ header {
   font-size: 13px;
   line-height: 37px;
   text-align: center;
-  min-width: 161px;
+  width: 161px;
   text-transform: uppercase;
   color: $colorWhite;
   border-radius: 2px;
@@ -157,15 +155,13 @@ header {
   color: $colorE3B873;
 }
 .logo {
-  min-width: 180px;
-  margin-right: 10px;
+  flex-grow: 1;
 }
 .phone {
   display: inline-block;
   border-bottom: solid 1px;
   color: #e3b873;
-  // min-width: 120px;
-  margin: 0 10px 0 40px;
+  margin: 0 45px 0 74px;
 }
 @media all and (max-width: 1080px) {
   header .container {
@@ -219,7 +215,7 @@ header {
     font-size: 12px;
     line-height: 14px;
     color: $colorWhite;
-    // min-width: 100px;
+    width: 215px;
     margin: 0;
   }
 }
@@ -241,8 +237,7 @@ header {
       url(../../img/wr-repair.jpg);
     background-size: cover;
     width: 100%;
-    min-height: 707px;
-    padding-left: 60px;
+    padding: 192px 0 190px 60px;
     p {
       font-family: FuturaBookC;
       font-size: 22px;
@@ -723,22 +718,20 @@ aside {
   }
   .types {
     display: flex;
-    justify-content: space-evenly;
-    min-width: 1300px;
     margin-top: 18px;
   }
   .repair {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 15px;
     div {
-      min-width: 330px;
-      min-height: 286px;
+      width: 84%;
       background: $colorWhite;
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
       transform: translateY(-127px);
       padding-left: 32px;
-      padding-top: 22px;
+      padding-top: 23px;
       box-sizing: border-box;
     }
     .repair-name {
@@ -770,7 +763,7 @@ aside {
 }
 /* wr-measurement */
 .wr-measurement {
-  padding: 80px 0 205px;
+  padding: 82px 0 205px;
   // background-image: url(../../img/vector.svg);
   // background-size: cover;
   .container {
@@ -802,14 +795,13 @@ aside {
   }
 }
 .measurer {
-  padding: 51px 98px 51px 0;
+  padding: 51px 98px 80px 0;
   form {
     background-color: #131313;
     width: 506px;
-    height: 509px;
+    height: 100%;
     @extend %flex-center-between;
     flex-direction: column;
-    margin: 0 auto;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     padding: 24px 47px 27px;
     box-sizing: border-box;
@@ -864,7 +856,7 @@ aside {
     }
     input[type="submit"] {
       width: 213px;
-      height: 51px;
+      line-height: 51px;
       background: $colorE3B873;
       box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
       border: none;
@@ -1579,16 +1571,18 @@ footer {
   background: $bg-dark;
   .container {
     @extend %flex-center-between;
-    padding: 0 107px;
-    height: 133px;
+    padding: 0 116px 0 96px;
+    height: 83px;
     div {
       @extend %flex-center-between;
-      min-width: 1005px;
+      flex-grow: 2.4;
+      nav {
+        flex-grow: 1;
+      }
     }
     ul {
       display: flex;
-      justify-content: space-around;
-      min-width: 630px;
+      justify-content: space-between;
     }
     li {
       a {
