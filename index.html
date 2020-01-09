@@ -53,7 +53,7 @@
   <section class="wr-projects">
     <div class="container">
       <div class="block1">
-        <h2>Completed projects</h2>
+        <h2>Completed</br>projects</h2>
         <p>Only a small part of the work performed by our company is presented on the site. For 14 years on in the
           construction
           market we have made happy more than 1000 families</p>
@@ -84,18 +84,16 @@
           </div>
         </div>
       </div>
-
       <div class="block2">
-        <ul>
-          <li>rostov-on-don, admiral</li>
-          <li>sochi thieves</li>
-          <li>rostov-on-don patriotic</li>
+        <ul class="tab-header">
+          <li class="tab-h" data-tab="0">rostov-on-don, admiral</li>
+          <li class="tab-h" data-tab="1">sochi thieves</liclass="tab">
+          <li class="tab-h" data-tab="2">rostov-on-don patriotic</liclass="tab">
         </ul>
-
         <div class="slider2">
-          <img src="./img/slider1.jpg" alt="admiral">
-          <img src="./img/slider2.jpg" alt="admiral">
-          <img src="./img/slider3.jpg" alt="admiral">
+          <img src="./img/slider1.jpg" class="tab-b" alt="admiral">
+          <img src="./img/slider2.jpg" class="tab-b" alt="admiral">
+          <img src="./img/slider3.jpg" class="tab-b" alt="admiral">
         </div>
       </div>
     </div>
@@ -105,11 +103,18 @@
       <h3>online control</h3>
       <img src="./img/camera.png" alt="camera">
       <div>
-        <video id="Video1" controls="controls" poster="./img/poster.jpg">
+        <video class="video" poster="./img/poster.jpg">
           <source src="./img/video.mp4" type='video/mp4'>
           Элемент video не поддерживается вашим браузером.
         </video>
-        <button id="play" onclick="vidplay()"><img src="./img/buttonvideo.png" alt="play"></button>
+        <button class="btnvideo"><img src="./img/buttonvideo.png" alt="play"></button>
+        <div class="btns">
+          <button class="restart"><img src="./img/buttonvideo.png" alt="restart"></button>
+          <button class="rew"><img src="./img/rewind.png" alt="rew"></button>
+          <button class="play"><img src="./img/buttonvideo.png" alt="play"></button>
+          <button class="stop"><img src="./img/stopvideo.png" alt="stop"></button>
+          <button class="fastfwd"><img src="./img/rewind.png" alt="fast"></button>
+        </div>
       </div>
       <p>At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you
         can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast
