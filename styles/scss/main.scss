@@ -608,6 +608,7 @@ aside {
 @media all and (max-width: 850px) {
   .wr-projects {
     padding-bottom: 380px;
+    background-image: none;
     .container {
       padding-left: 0px;
       position: relative;
@@ -923,7 +924,7 @@ aside {
     }
     p {
       max-width: none;
-      padding: 0 15px;
+      padding: 0 20px;
     }
     form div label {
       margin: 0 20px;
@@ -933,8 +934,14 @@ aside {
 @media all and (max-width: 710px) {
   .wr-video {
     min-height: 510px;
+    background-color: $bg-dark;
+    .container {
+      position: static;
+      transform: none;
+    }
     video {
-      height: 207px;
+      width: 340px;
+      height: auto;
     }
     .btns {
       bottom: 2px;
@@ -944,40 +951,105 @@ aside {
       width: 100%;
       margin-top: 40px;
       > label {
-        position: absolute;
-        top: 80px;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 10px 0 50px;
+      }
+      input {
+        background-color: #131313;
+      }
+      input::-webkit-input-placeholder {
+        color: $colorWhite;
+      }
+      input::-moz-placeholder {
+        color: $colorWhite;
+      }
+      input:-moz-placeholder {
+        color: $colorWhite;
+      }
+      input:-ms-input-placeholder {
+        color: $colorWhite;
+      }
+      input::placeholder {
+        color: $colorWhite;
       }
       div {
         flex-direction: column;
+        label {
+          color: rgba(255, 255, 255, 0.5);
+          margin-bottom: 40px;
+        }
         label:last-child {
           margin-top: 65px;
+          position: absolute;
+          bottom: -65px;
+        }
+      }
+    }
+    p {
+      color: $colorWhite;
+      margin-top: 50px;
+    }
+    .wr-video p:before {
+      top: -20px;
+    }
+    .stop,
+    .restart,
+    .rew,
+    .fastfwd,
+    .play {
+      transform: scale(0.7);
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .wr-projects {
+    padding-bottom: 50px;
+  }
+}
+@media all and (max-width: 530px) {
+  .wr-video p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media all and (max-width: 350px) {
+  .wr-video {
+    min-height: 560px;
+    video {
+      width: 300px;
+      height: auto;
+    }
+    form {
+      margin-top: 10px;
+      div {
+        label {
+          margin-bottom: 10px;
+        }
+        label:last-child {
+          bottom: -35px;
         }
       }
     }
   }
-  .stop,
-  .restart,
-  .rew,
-  .fastfwd,
-  .play {
-    transform: scale(0.8);
-  }
 }
+
 /* wr-types */
 .wr-types {
   // background-image: url(../../img/vector.svg);
   // background-size: cover;
   .container {
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    > img {
+      margin-top: 13px;
+    }
   }
   h3 {
     color: $color181818;
   }
-  img {
-    margin-top: 13px;
-  }
+
   .types {
     display: flex;
     margin-top: 18px;
@@ -1017,9 +1089,105 @@ aside {
       background-color: $colorE3B873;
       box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
       width: 228px;
-      height: 54px;
       transform: translate(-32px, 50%);
       text-align: center;
+    }
+  }
+}
+@media all and (max-width: 1270px) {
+  .wr-types .repair img {
+    width: 300px;
+  }
+}
+@media all and (max-width: 990px) {
+  .wr-types .repair img {
+    width: 250px;
+  }
+}
+@media all and (max-width: 840px) {
+  .wr-types .repair {
+    margin: 0 10px;
+    div {
+      padding: 0;
+    }
+    img {
+      width: 210px;
+    }
+    ul {
+      font-size: 13px;
+      line-height: 22px;
+    }
+    .repair-name {
+      font-size: 15px;
+      line-height: 21px;
+    }
+    .cost {
+      font-size: 14px;
+      line-height: 40px;
+      width: 84%;
+      transform: none;
+      text-transform: capitalize;
+    }
+  }
+}
+@media all and (max-width: 690px) {
+  .wr-types {
+    .types {
+      flex-direction: column;
+    }
+    .repair {
+      margin: 0 15px;
+      margin-bottom: -40px;
+      div {
+        padding-left: 32px;
+        padding-top: 23px;
+      }
+      img {
+        width: auto;
+      }
+      ul {
+        font-size: 15px;
+        line-height: 25px;
+      }
+      .repair-name {
+        font-size: 18px;
+        line-height: 25px;
+      }
+      .cost {
+        font-size: 18px;
+        line-height: 54px;
+        width: 84%;
+        transform: translate(-32px, 50%);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+@media all and (max-width: 430px) {
+  .wr-types .repair {
+    margin: 0 10px;
+    margin-bottom: -80px;
+    div {
+      padding-left: 15px;
+      padding-top: 0;
+    }
+    img {
+      width: 260px;
+    }
+    ul {
+      font-size: 13px;
+      line-height: 22px;
+    }
+    .repair-name {
+      font-size: 15px;
+      line-height: 21px;
+    }
+    .cost {
+      font-size: 14px;
+      line-height: 40px;
+      width: 84%;
+      transform: none;
+      text-transform: capitalize;
     }
   }
 }
@@ -1173,6 +1341,46 @@ aside {
     position: absolute;
     left: 8%;
     top: -16%;
+  }
+}
+@media all and (max-width: 1430px) {
+  .free-metering svg {
+    width: 650px;
+  }
+}
+@media all and (max-width: 1285px) {
+  .free-metering svg {
+    width: 590px;
+  }
+  .measurer form {
+    width: 440px;
+  }
+  .wr-measurement {
+    padding: 0px 0px 200px;
+  }
+}
+@media all and (max-width: 1160px) {
+  .free-metering {
+    width: 100%;
+    svg {
+      display: none;
+    }
+  }
+}
+@media all and (max-width: 950px) {
+  .free-metering {
+    display: none;
+  }
+  .wr-measurement .container {
+    justify-content: center;
+  }
+  .measurer {
+    padding: 0px 0px 60px 0;
+  }
+}
+@media all and (max-width: 500px) {
+  .wr-measurement {
+    display: none;
   }
 }
 /* wr-realization */

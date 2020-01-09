@@ -628,6 +628,7 @@ aside .link:after {
 @media all and (max-width: 850px) {
   .wr-projects {
     padding-bottom: 380px;
+    background-image: none;
   }
   .wr-projects .container {
     padding-left: 0px;
@@ -935,7 +936,7 @@ aside .link:after {
   }
   .wr-video p {
     max-width: none;
-    padding: 0 15px;
+    padding: 0 20px;
   }
   .wr-video form div label {
     margin: 0 20px;
@@ -944,9 +945,15 @@ aside .link:after {
 @media all and (max-width: 710px) {
   .wr-video {
     min-height: 510px;
+    background-color: #131313;
+  }
+  .wr-video .container {
+    position: static;
+    transform: none;
   }
   .wr-video video {
-    height: 207px;
+    width: 340px;
+    height: auto;
   }
   .wr-video .btns {
     bottom: 2px;
@@ -957,35 +964,96 @@ aside .link:after {
     margin-top: 40px;
   }
   .wr-video form > label {
-    position: absolute;
-    top: 80px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 10px 0 50px;
+  }
+  .wr-video form input {
+    background-color: #131313;
+  }
+  .wr-video form input::-webkit-input-placeholder {
+    color: #fff;
+  }
+  .wr-video form input::-moz-placeholder {
+    color: #fff;
+  }
+  .wr-video form input:-moz-placeholder {
+    color: #fff;
+  }
+  .wr-video form input:-ms-input-placeholder {
+    color: #fff;
+  }
+  .wr-video form input::placeholder {
+    color: #fff;
   }
   .wr-video form div {
     flex-direction: column;
   }
+  .wr-video form div label {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 40px;
+  }
   .wr-video form div label:last-child {
     margin-top: 65px;
+    position: absolute;
+    bottom: -65px;
+  }
+  .wr-video p {
+    color: #fff;
+    margin-top: 50px;
+  }
+  .wr-video .wr-video p:before {
+    top: -20px;
+  }
+  .wr-video .stop,
+.wr-video .restart,
+.wr-video .rew,
+.wr-video .fastfwd,
+.wr-video .play {
+    transform: scale(0.7);
+    margin: 0;
+    padding: 0;
   }
 
-  .stop,
-.restart,
-.rew,
-.fastfwd,
-.play {
-    transform: scale(0.8);
+  .wr-projects {
+    padding-bottom: 50px;
+  }
+}
+@media all and (max-width: 530px) {
+  .wr-video p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media all and (max-width: 350px) {
+  .wr-video {
+    min-height: 560px;
+  }
+  .wr-video video {
+    width: 300px;
+    height: auto;
+  }
+  .wr-video form {
+    margin-top: 10px;
+  }
+  .wr-video form div label {
+    margin-bottom: 10px;
+  }
+  .wr-video form div label:last-child {
+    bottom: -35px;
   }
 }
 /* wr-types */
 .wr-types .container {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.wr-types .container > img {
+  margin-top: 13px;
+}
 .wr-types h3 {
   color: #181818;
-}
-.wr-types img {
-  margin-top: 13px;
 }
 .wr-types .types {
   display: flex;
@@ -1025,11 +1093,105 @@ aside .link:after {
   background-color: #e3b873;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
   width: 228px;
-  height: 54px;
   transform: translate(-32px, 50%);
   text-align: center;
 }
 
+@media all and (max-width: 1270px) {
+  .wr-types .repair img {
+    width: 300px;
+  }
+}
+@media all and (max-width: 990px) {
+  .wr-types .repair img {
+    width: 250px;
+  }
+}
+@media all and (max-width: 840px) {
+  .wr-types .repair {
+    margin: 0 10px;
+  }
+  .wr-types .repair div {
+    padding: 0;
+  }
+  .wr-types .repair img {
+    width: 210px;
+  }
+  .wr-types .repair ul {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .wr-types .repair .repair-name {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .wr-types .repair .cost {
+    font-size: 14px;
+    line-height: 40px;
+    width: 84%;
+    transform: none;
+    text-transform: capitalize;
+  }
+}
+@media all and (max-width: 690px) {
+  .wr-types .types {
+    flex-direction: column;
+  }
+  .wr-types .repair {
+    margin: 0 15px;
+    margin-bottom: -40px;
+  }
+  .wr-types .repair div {
+    padding-left: 32px;
+    padding-top: 23px;
+  }
+  .wr-types .repair img {
+    width: auto;
+  }
+  .wr-types .repair ul {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .wr-types .repair .repair-name {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .wr-types .repair .cost {
+    font-size: 18px;
+    line-height: 54px;
+    width: 84%;
+    transform: translate(-32px, 50%);
+    text-transform: uppercase;
+  }
+}
+@media all and (max-width: 430px) {
+  .wr-types .repair {
+    margin: 0 10px;
+    margin-bottom: -80px;
+  }
+  .wr-types .repair div {
+    padding-left: 15px;
+    padding-top: 0;
+  }
+  .wr-types .repair img {
+    width: 260px;
+  }
+  .wr-types .repair ul {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .wr-types .repair .repair-name {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .wr-types .repair .cost {
+    font-size: 14px;
+    line-height: 40px;
+    width: 84%;
+    transform: none;
+    text-transform: capitalize;
+  }
+}
 /* wr-measurement */
 .wr-measurement {
   padding: 82px 0 275px;
@@ -1179,6 +1341,50 @@ aside .link:after {
   top: -16%;
 }
 
+@media all and (max-width: 1430px) {
+  .free-metering svg {
+    width: 650px;
+  }
+}
+@media all and (max-width: 1285px) {
+  .free-metering svg {
+    width: 590px;
+  }
+
+  .measurer form {
+    width: 440px;
+  }
+
+  .wr-measurement {
+    padding: 0px 0px 200px;
+  }
+}
+@media all and (max-width: 1160px) {
+  .free-metering {
+    width: 100%;
+  }
+  .free-metering svg {
+    display: none;
+  }
+}
+@media all and (max-width: 950px) {
+  .free-metering {
+    display: none;
+  }
+
+  .wr-measurement .container {
+    justify-content: center;
+  }
+
+  .measurer {
+    padding: 0px 0px 60px 0;
+  }
+}
+@media all and (max-width: 500px) {
+  .wr-measurement {
+    display: none;
+  }
+}
 /* wr-realization */
 .wr-realization .container {
   background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)), url(../../img/wr-realization.jpg);
