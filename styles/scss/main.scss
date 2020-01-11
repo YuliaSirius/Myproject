@@ -936,6 +936,7 @@ aside {
   .wr-video {
     min-height: 510px;
     background-color: $bg-dark;
+    margin-bottom: 0px;
     .rew img {
       transform: translateX(-3px) scale(0.5) rotate(180deg);
     }
@@ -1404,7 +1405,7 @@ aside {
     background-size: cover;
     display: flex;
     justify-content: space-between;
-    padding: 135px 0 91px 114px;
+    padding: 135px 0 79px 114px;
     position: relative;
     .list {
       h2 {
@@ -1428,6 +1429,9 @@ aside {
   div {
     display: flex;
     flex-direction: column;
+  }
+  .mobile {
+    display: none;
   }
 }
 .first-column {
@@ -1520,7 +1524,28 @@ aside {
   }
 }
 @media all and (max-width: 450px) {
-
+  .wr-realization {
+    background: linear-gradient(to top, #131313 40.5%, #fff 40.5%);
+    .container {
+      background: none;
+    }
+  }
+  .pictures {
+    .second-column {
+      display: none;
+    }
+    .first-column {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+  }
+}
+@media all and (max-width: 360px) {
+  .pictures > img {
+    width: 290px;
+  }
 }
 /* design */
 .wr-design {
@@ -1532,7 +1557,9 @@ aside {
     align-items: center;
     h3 {
       color: $color181818;
-      margin-bottom: 13px;
+    }
+    > img {
+      margin-top: 13px;
     }
     > p {
       @extend %FBookC20px;
@@ -1541,22 +1568,21 @@ aside {
       color: $color363636;
       margin-top: 18px;
       white-space: pre-line;
+      padding: 0 20px;
     }
   }
 }
 .design {
   display: flex;
-  justify-content: space-evenly;
-  min-width: 1300px;
   margin-top: 48px;
 }
 .design-projects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: -126px;
+  margin: 0 15px -126px 15px;
   div {
-    min-width: 330px;
+    width: 84%;
     background-color: $colorWhite;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
     transform: translateY(-126px);
@@ -1564,6 +1590,9 @@ aside {
     padding-top: 22px;
     box-sizing: border-box;
     position: relative;
+  }
+  img {
+    width: 100%;
   }
   .design-name {
     font-family: Yeseva One;
@@ -1585,10 +1614,66 @@ aside {
     color: $colorWhite;
     background-color: #e3b873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-    width: 193px;
-    height: 54px;
+    width: 65%;
     transform: translate(-32px, 32px);
     padding-left: 35px;
+  }
+}
+@media all and (max-width: 980px) {
+  .wr-design {
+    padding-top: 100px;
+  }
+  .design-projects .cost {
+    text-transform: none;
+    padding-left: 0;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 780px) {
+  .wr-design {
+    background: $bg-dark;
+    padding-top: 50px;
+    .container {
+      h3,
+      > p {
+        color: $colorWhite;
+        white-space: normal;
+      }
+    }
+  }
+  .design {
+    flex-direction: column;
+  }
+  .design-projects {
+    margin-bottom: -40px;
+  }
+}
+@media all and (max-width: 400px) {
+  .wr-design {
+    .container {
+      h3 {
+        font-size: 22px;
+      }
+      > p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+      .design-name {
+        font-size: 15px;
+      }
+    }
+  }
+  .design-projects {
+    align-items: flex-start;
+    ul {
+      font-size: 13px;
+      line-height: 22px;
+    }
+    div {
+      padding-top: 18px;
+      width: 73%;
+    }
   }
 }
 /* wr-steps */
@@ -1601,6 +1686,7 @@ aside {
   }
 }
 .first-flex {
+  padding-right: 20px;
   > p {
     font-family: FuturaDemiC;
     font-size: 15px;
@@ -1625,7 +1711,6 @@ aside {
 }
 .slider-steps {
   max-width: 312px;
-  min-height: 396px;
   margin: 84px 0;
   span {
     @extend %Yeseva18pxUpp;
@@ -1641,12 +1726,14 @@ aside {
     margin-top: 18px;
     white-space: pre-line;
   }
+  p:last-of-type {
+    margin-bottom: 65px;
+  }
   p {
     @extend %FBookC15px;
     line-height: 27px;
     color: $colorWhite;
     margin-top: 8px;
-    padding: 0 2px;
   }
   .slick-dots {
     .slick-active {
@@ -1739,6 +1826,46 @@ aside {
     color: $colorWhite;
     margin-top: 10px;
   }
+  img {
+    width: 100%;
+  }
+}
+@media all and (max-width: 1310px) {
+  .wr-steps .container {
+    padding: 0 20px;
+  }
+}
+@media all and (max-width: 700px) {
+  .wr-steps {
+    .container {
+      justify-content: center;
+    }
+  }
+  .first-flex {
+    h2 {
+      font-size: 22px;
+      text-align: center;
+      max-width: none;
+    }
+    h2:after {
+      display: none;
+    }
+  }
+  .slider-steps {
+    margin: 30px 0;
+  }
+  .second-flex {
+    display: none;
+  }
+  .slider-steps p:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .wr-steps {
+    display: none;
+  }
 }
 /* wr-ourteam */
 .wr-ourteam {
@@ -1794,23 +1921,26 @@ aside {
 }
 .team-photo {
   display: flex;
-  max-width: 1027px;
-  width: 100%;
-  justify-content: space-between;
   margin-top: 83px;
 }
 .foto {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin: 0 53px;
+  img:first-of-type {
+    width: 100%;
+  }
+  img:last-of-type {
+    width: 26%;
+  }
   p {
     font-family: Yeseva One, cursive;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
     color: $color181818;
-    max-width: 233px;
-    width: 100%;
+    width: 86%;
     background: $colorWhite;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
     align-self: center;
@@ -1862,6 +1992,20 @@ aside {
   position: relative;
   left: calc(50% - 27px);
   top: -9px;
+}
+@media all and (max-width: 1030px) {
+  .foto {
+    margin: 0 25px;
+    p {
+      span:last-of-type {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+@media all and (max-width: 780px) {
+
+
 }
 /* wr-clients */
 .wr-clients {
