@@ -30,7 +30,7 @@
 }
 
 .slider-steps span, .design-projects .cost, .wr-types .repair .cost, .sl1 span {
-  font-family: YesevaOne, cursive;
+  font-family: YesevaOne;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -70,7 +70,7 @@ a {
 }
 
 h1 {
-  font-family: YesevaOne, cursive;
+  font-family: YesevaOne;
   font-size: 40px;
   line-height: 53px;
   text-transform: uppercase;
@@ -405,7 +405,7 @@ aside .link:after {
   display: flex;
 }
 .block2 ul li {
-  font-family: YesevaOne, cursive;
+  font-family: YesevaOne;
   font-size: 14px;
   line-height: 19px;
   text-transform: uppercase;
@@ -1214,7 +1214,7 @@ aside .link:after {
   height: 637px;
 }
 .free-metering svg text {
-  font-family: Yeseva One, cursive;
+  font-family: Yeseva One;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -1713,7 +1713,7 @@ aside .link:after {
   color: #fff;
 }
 .slider-steps p:first-of-type {
-  font-family: Yeseva One, cursive;
+  font-family: Yeseva One;
   font-size: 15px;
   line-height: 23px;
   text-transform: uppercase;
@@ -1800,7 +1800,8 @@ aside .link:after {
   min-width: 120px;
   cursor: pointer;
 }
-.second-flex li:hover {
+.second-flex li:hover,
+.second-flex li.active {
   opacity: 1;
 }
 .second-flex span {
@@ -1816,7 +1817,8 @@ aside .link:after {
   color: #fff;
   margin-top: 10px;
 }
-.second-flex img {
+.second-flex img:not(.first) {
+  display: none;
   width: 100%;
 }
 
@@ -1859,7 +1861,7 @@ aside .link:after {
 /* wr-ourteam */
 .wr-ourteam {
   padding: 94px 0 50px;
-  background: linear-gradient(to bottom, #131313 500px, #fff 500px);
+  background: linear-gradient(to bottom, #131313 50%, #fff 50%);
 }
 .wr-ourteam .container {
   display: flex;
@@ -1880,7 +1882,7 @@ aside .link:after {
   margin-top: 18px;
 }
 .wr-ourteam .container a {
-  font-family: Yeseva One, cursive;
+  font-family: Yeseva One;
   font-size: 20px;
   color: #181818;
   cursor: pointer;
@@ -1925,7 +1927,7 @@ aside .link:after {
   width: 26%;
 }
 .foto p {
-  font-family: Yeseva One, cursive;
+  font-family: Yeseva One;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -2142,7 +2144,7 @@ aside .link:after {
 }
 /* wr-map */
 .wr-map {
-  background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%);
+  background-color: rgba(24, 24, 24, 0.7);
 }
 .wr-map .container {
   background-image: url(../../img/wr-map.png);
@@ -2173,7 +2175,7 @@ aside .link:after {
   margin-right: 158px;
 }
 .wr-map .container form p {
-  font-family: Yeseva One, cursive;
+  font-family: Yeseva One;
   font-size: 20px;
   line-height: 28px;
   text-align: center;
@@ -2285,7 +2287,7 @@ aside .link:after {
   }
   .wr-map .container iframe {
     order: 2;
-    margin: 0px 20px;
+    margin: 20px 20px 0 20px;
   }
   .wr-map .container > div {
     order: 4;

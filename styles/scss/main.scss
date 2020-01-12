@@ -44,7 +44,7 @@ $color959595: #959595;
   font-size: 20px;
 }
 %Yeseva18pxUpp {
-  font-family: YesevaOne, cursive;
+  font-family: YesevaOne;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -78,7 +78,7 @@ a {
   box-sizing: border-box;
 }
 h1 {
-  font-family: YesevaOne, cursive;
+  font-family: YesevaOne;
   font-size: 40px;
   line-height: 53px;
   text-transform: uppercase;
@@ -224,7 +224,6 @@ header {
     border: none;
   }
 }
-
 /* wr-home */
 .wr-home {
   background: $bg-dark;
@@ -402,7 +401,7 @@ aside {
   ul {
     display: flex;
     li {
-      font-family: YesevaOne, cursive;
+      font-family: YesevaOne;
       font-size: 14px;
       line-height: 19px;
       text-transform: uppercase;
@@ -721,17 +720,11 @@ aside {
   h3 {
     color: $colorWhite;
   }
-
   video {
     width: 817px;
     height: 434px;
     z-index: -4;
-    // position: relative;
   }
-  // [poster="./img/poster.jpg"] {
-  //   z-index: 8;
-  //   position: relative;
-  // }
   .btnvideo {
     position: absolute;
     top: calc(50% - 43px);
@@ -785,9 +778,7 @@ aside {
   .stop {
     @extend %btns;
     margin-right: 10px;
-    // opacity: 1;
     position: relative;
-    // transform: translate(-59px, 0px);
     img {
       transform: translateY(-1px) scale(0.9);
     }
@@ -1043,7 +1034,6 @@ aside {
     }
   }
 }
-
 /* wr-types */
 .wr-types {
   // background-image: url(../../img/vector.svg);
@@ -1203,9 +1193,9 @@ aside {
   }
 }
 /* wr-measurement */
-.wr-measurement {
+.wr-measurement  {
   padding: 82px 0 273px;
-  // background-image: url(../../img/vector.svg);
+  // background-image: url(../../img/Vector.svg);
   // background-size: cover;
   .container {
     display: flex;
@@ -1219,11 +1209,8 @@ aside {
   svg {
     width: 800px;
     height: 637px;
-    // circle {
-    //   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
-    // }
-    text {
-      font-family: Yeseva One, cursive;
+       text {
+      font-family: Yeseva One;
       font-size: 18px;
       line-height: 25px;
       text-align: center;
@@ -1720,7 +1707,7 @@ aside {
     color: $colorWhite;
   }
   p:first-of-type {
-    font-family: Yeseva One, cursive;
+    font-family: Yeseva One;
     font-size: 15px;
     line-height: 23px;
     text-transform: uppercase;
@@ -1811,8 +1798,9 @@ aside {
     min-width: 120px;
     cursor: pointer;
   }
-  li:hover {
-    opacity: 1;
+  li:hover,
+  li.active {
+     opacity: 1;
   }
   span {
     font-family: Yeseva One;
@@ -1828,7 +1816,8 @@ aside {
     color: $colorWhite;
     margin-top: 10px;
   }
-  img {
+  img:not(.first) {
+    display: none;
     width: 100%;
   }
 }
@@ -1871,7 +1860,7 @@ aside {
 /* wr-ourteam */
 .wr-ourteam {
   padding: 94px 0 50px;
-  background: linear-gradient(to bottom, #131313 500px, #fff 500px);
+  background: linear-gradient(to bottom, #131313 50%, #fff 50%);
   .container {
     display: flex;
     flex-direction: column;
@@ -1891,7 +1880,7 @@ aside {
       margin-top: 18px;
     }
     a {
-      font-family: Yeseva One, cursive;
+      font-family: Yeseva One;
       font-size: 20px;
       color: $color181818;
       cursor: pointer;
@@ -1935,7 +1924,7 @@ aside {
     width: 26%;
   }
   p {
-    font-family: Yeseva One, cursive;
+    font-family: Yeseva One;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
@@ -2152,11 +2141,7 @@ aside {
 }
 /* wr-map */
 .wr-map {
-  background: linear-gradient(
-    180deg,
-    rgba(24, 24, 24, 0.9) 3.47%,
-    rgba(24, 24, 24, 0.72) 100%
-  );
+  background-color: rgba(24, 24, 24, 0.7);
   .container {
     background-image: url(../../img/wr-map.png);
     background-position: right;
@@ -2185,7 +2170,7 @@ aside {
         }
       }
       p {
-        font-family: Yeseva One, cursive;
+        font-family: Yeseva One;
         font-size: 20px;
         line-height: 28px;
         text-align: center;
@@ -2299,7 +2284,7 @@ aside {
     padding-bottom: 30px;
     iframe {
       order: 2;
-      margin: 0px 20px;
+      margin: 20px 20px 0 20px;
     }
     > div {
       order: 4;

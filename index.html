@@ -85,15 +85,15 @@
         </div>
       </div>
       <div class="block2">
-        <ul class="tab-header">
-          <li class="tab-h" data-tab="0">rostov-on-don, admiral</li>
-          <li class="tab-h" data-tab="1">sochi thieves</li>
-          <li class="tab-h" data-tab="2">rostov-on-don patriotic</li>
+        <ul class="tab">
+          <li class="tablinks" onclick="openCity(event, 'London')">rostov-on-don, admiral</li>
+          <li class="tablinks" onclick="openCity(event, 'Paris')">sochi thieves</li>
+          <li class="tablinks" onclick="openCity(event, 'Tokyo')">rostov-on-don patriotic</li>
         </ul>
         <div class="slider2">
-          <img src="./img/slider1.jpg" class="tab-b" alt="admiral">
-          <img src="./img/slider2.jpg" class="tab-b" alt="admiral">
-          <img src="./img/slider3.jpg" class="tab-b" alt="admiral">
+          <img id="London" class="tabcontent" src="./img/slider1.jpg" alt="admiral">
+          <img id="Paris" class="tabcontent" src="./img/slider2.jpg" alt="admiral">
+          <img id="Tokyo" class="tabcontent" src="./img/slider3.jpg" alt="admiral">
         </div>
       </div>
     </div>
@@ -418,28 +418,33 @@
       </div>
       <div class="second-flex">
         <ul>
-          <li><span>01</span>
+          <li class="tablinks active" onclick="tab(event, '01')"><span>01</span>
             <p>Departure to<br>room measurements</p>
           </li>
-          <li><span>02</span>
+          <li class="tablinks" onclick="tab(event, '02')"><span>02</span>
             <p>Compilation<br>estimates</p>
           </li>
-          <li><span>03</span>
+          <li class="tablinks" onclick="tab(event, '03')"><span>03</span>
             <p>Development<br>project design</p>
           </li>
         </ul>
         <ul>
-          <li><span>04</span>
+          <li class="tablinks" onclick="tab(event, '04')"><span>04</span>
             <p>Purchasing<br>Supplies</p>
           </li>
-          <li><span>05</span>
+          <li class="tablinks" onclick="tab(event, '05')"><span>05</span>
             <p>Repair finishing<br>work</p>
           </li>
-          <li><span>06</span>
+          <li class="tablinks" onclick="tab(event, '06')"><span>06</span>
             <p>Acceptance<br>of work</p>
           </li>
         </ul>
-        <img src="./img/departure.jpg" alt="departure">
+        <img id="01" class="tabcontent first" src="./img/stepone.jpg" alt="departure">
+        <img id="02" class="tabcontent" src="./img/steptwo.jpg" alt="departure">
+        <img id="03" class="tabcontent" src="./img/stepthree.jpg" alt="departure">
+        <img id="04" class="tabcontent" src="./img/stepfour.jpg" alt="departure">
+        <img id="05" class="tabcontent" src="./img/stepfive.jpg" alt="departure">
+        <img id="06" class="tabcontent" src="./img/stepsix.jpg" alt="departure">
       </div>
     </div>
   </section>
@@ -569,8 +574,9 @@
         Tel +7 (928) 768 32 29
       </h3>
       <div class="social">
-        <img src="./img/icon-email.png" alt="e-mail">
-        <img src="./img/icon-inst.png" alt="instagram">
+        <a href="#" title="leave a request"><img src="./img/icon-email.png" alt="e-mail"></a>
+        <a href="https://www.instagram.com" target="_blank" title="instagram"><img src="./img/icon-inst.png"
+            alt="instagram"></a>
       </div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.5553124358066!2d39.720990815453966!3d47.24484357916232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sby!4v1578075730355!5m2!1sru!2sby"></iframe>
