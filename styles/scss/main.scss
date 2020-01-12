@@ -1861,7 +1861,6 @@ aside {
     margin-bottom: 0px;
   }
 }
-
 @media all and (max-width: 375px) {
   .wr-steps {
     display: none;
@@ -1888,34 +1887,6 @@ aside {
       color: $colorWhite;
       max-width: 460px;
       margin-top: 18px;
-    }
-    a {
-      font-family: Yeseva One, cursive;
-      font-size: 20px;
-      line-height: 28px;
-      color: $color181818;
-      cursor: pointer;
-      align-self: flex-end;
-      margin-top: -70px;
-      margin-right: 50px;
-      text-shadow: 0px 3px 10px rgba(160, 122, 61, 0.15);
-    }
-    a:hover,
-    a:focus {
-      color: $colorE3B873;
-    }
-    a:after {
-      content: "";
-      background-image: url(../../img/arrow-slider-black.png);
-      display: block;
-      width: 42px;
-      height: 14px;
-      background-repeat: no-repeat;
-      position: relative;
-      top: -21px;
-      left: 58px;
-      opacity: 0.7;
-      transform: scale(0.7);
     }
   }
 }
@@ -2004,9 +1975,39 @@ aside {
   }
 }
 @media all and (max-width: 780px) {
-
-
+  .team-photo {
+    flex-direction: column;
+  }
+  .foto {
+    margin: 0 25px;
+    p {
+      span:last-of-type {
+        text-transform: uppercase;
+      }
+    }
+  }
+  .wr-ourteam .text1 {
+    padding: 0 20px;
+  }
 }
+@media all and (max-width: 410px) {
+  .wr-ourteam {
+    background: $bg-dark;
+    padding: 50px 0 0 0;
+    .container {
+      h3 {
+        font-size: 22px;
+      }
+      .text1 {
+        font-size: 15px;
+      }
+    }
+  }
+  .text2 {
+    display: none;
+  }
+}
+
 /* wr-clients */
 .wr-clients {
   background-image: url(../../img/wr-reviews.png);
@@ -2062,9 +2063,6 @@ aside {
 .clients-reviews {
   display: flex;
   margin-top: 47px;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1235px;
   figure {
     display: flex;
     align-items: center;
@@ -2087,20 +2085,21 @@ aside {
   padding: 25px;
   background: $colorWhite;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
-  min-height: 430px;
   box-sizing: border-box;
   position: relative;
+  margin: 0 28px;
   > p {
     @extend %FBookC15px;
     line-height: 27px;
     color: $color959595;
     max-width: 324px;
+    padding-bottom: 86px;
   }
   div {
     display: flex;
     align-items: center;
     background-color: $colorE3B873;
-    width: 294px;
+    width: 79%;
     height: 54px;
     position: absolute;
     bottom: -25px;
@@ -2122,6 +2121,31 @@ aside {
       color: $colorWhite;
       vertical-align: middle;
     }
+  }
+}
+@media all and (max-width: 1110px) {
+  .review {
+    margin: 0 15px;
+    div span {
+      font-size: 13px;
+      // text-transform: capitalize;
+    }
+  }
+  .review div p img {
+    display: none;
+  }
+}
+@media all and (max-width: 900px) {
+  .clients-reviews {
+    flex-direction: column;
+  }
+  .review {
+    margin-bottom: 45px;
+  }
+}
+@media all and (max-width: 410px) {
+  .wr-clients {
+    display: none;
   }
 }
 /* wr-map */
@@ -2263,6 +2287,10 @@ aside {
     }
   }
 }
+
+@media all and (max-width: 410px) {
+}
+
 /* footer */
 footer {
   background: $bg-dark;
