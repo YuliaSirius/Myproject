@@ -175,25 +175,25 @@ header {
 @media all and (max-width: 1190px) {
   header .container {
     padding: 0 25px;
-  }
-  .phone {
-    margin: 0 15px;
+    .phone {
+      margin: 0 15px;
+    }
   }
 }
 @media all and (max-width: 930px) {
-  .logo {
-    max-width: 80px;
-  }
-  header .container {
+  footer .container {
     padding: 0 15px;
+    .logo {
+      max-width: 80px;
+    }
   }
 }
 @media all and (max-width: 810px) {
-  .call {
-    display: none;
-  }
   header .container {
     padding-right: 0;
+    .call {
+      display: none;
+    }
   }
 }
 @media all and (max-width: 620px) {
@@ -300,15 +300,17 @@ aside {
   }
 }
 @media all and (max-width: 700px) {
-  .container {
-    padding-left: 0px;
-    padding-right: 0px;
+  .wr-home {
+    .container {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .home {
+      padding: 100px 0 100px 30px;
+    }
   }
   h1 {
     font-size: 36px;
-  }
-  .wr-home .home {
-    padding: 100px 0 100px 30px;
   }
 }
 @media all and (max-width: 600px) {
@@ -1888,6 +1890,32 @@ aside {
       max-width: 460px;
       margin-top: 18px;
     }
+    a {
+      font-family: Yeseva One, cursive;
+      font-size: 20px;
+      color: $color181818;
+      cursor: pointer;
+      align-self: flex-end;
+      text-shadow: 0px 3px 10px rgba(160, 122, 61, 0.15);
+      margin-right: 50px;
+    }
+    a:hover,
+    a:focus {
+      color: $colorE3B873;
+    }
+    a:after {
+      content: "";
+      background-image: url(../../img/arrow-slider-black.png);
+      display: block;
+      width: 42px;
+      height: 14px;
+      background-repeat: no-repeat;
+      position: relative;
+      top: -21px;
+      left: 58px;
+      opacity: 0.7;
+      transform: scale(0.7);
+    }
   }
 }
 .team-photo {
@@ -1899,6 +1927,7 @@ aside {
   display: flex;
   flex-direction: column;
   margin: 0 53px;
+  margin-bottom: -62px;
   img:first-of-type {
     width: 100%;
   }
@@ -1949,10 +1978,8 @@ aside {
   line-height: 34px;
   text-align: center;
   color: $color181818;
-  max-width: 605px;
   white-space: pre-wrap;
   margin-top: 8px;
-  justify-self: center;
 }
 .text2:before {
   content: "";
@@ -2001,6 +2028,9 @@ aside {
       .text1 {
         font-size: 15px;
       }
+      a {
+        display: none;
+      }
     }
   }
   .text2 {
@@ -2014,7 +2044,7 @@ aside {
   background-position: bottom;
   background-repeat: repeat-x;
   padding-top: 45px;
-  padding-bottom: 310px;
+  padding-bottom: 381px;
   .container {
     display: flex;
     flex-direction: column;
@@ -2029,34 +2059,6 @@ aside {
       color: $color363636;
       max-width: 350px;
       margin-top: 18px;
-    }
-    a {
-      font-family: Yeseva One, cursive;
-      font-size: 20px;
-      line-height: 28px;
-      color: $color181818;
-      cursor: pointer;
-      align-self: flex-end;
-      text-shadow: 0px 3px 10px rgba(160, 122, 61, 0.15);
-      margin-top: 30px;
-      margin-right: 50px;
-    }
-    a:hover,
-    a:focus {
-      color: $colorE3B873;
-    }
-    a:after {
-      content: "";
-      background-image: url(../../img/arrow-slider-black.png);
-      display: block;
-      width: 42px;
-      height: 14px;
-      background-repeat: no-repeat;
-      position: relative;
-      top: -21px;
-      left: 58px;
-      opacity: 0.7;
-      transform: scale(0.7);
     }
   }
 }
@@ -2162,26 +2164,25 @@ aside {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
     position: relative;
     padding-top: 271px;
     padding-bottom: 63px;
     form {
       background-color: #131313;
-      width: 883px;
+      width: 60%;
       height: 445px;
       @extend %flex-center-between;
       flex-direction: column;
       position: absolute;
       top: -222px;
-      padding: 32px 182px;
+      padding: 32px 0;
       box-sizing: border-box;
       div {
         display: flex;
-        justify-content: space-between;
-        align-self: start;
-        width: 88%;
+        label:first-of-type {
+          margin-right: 158px;
+        }
       }
       p {
         font-family: Yeseva One, cursive;
@@ -2190,7 +2191,6 @@ aside {
         text-align: center;
         text-transform: uppercase;
         color: #fff;
-        max-width: 257px;
       }
       label {
         @extend %FBookC15px;
@@ -2199,9 +2199,6 @@ aside {
         display: flex;
         flex-direction: column;
         cursor: pointer;
-      }
-      label:first-of-type {
-        align-self: flex-start;
       }
       label[for="checkkk"] {
         flex-direction: row;
@@ -2253,8 +2250,6 @@ aside {
       input[type="submit"] {
         font-family: FuturaDemiC;
         font-size: 15px;
-        line-height: 26px;
-        text-align: center;
         text-transform: uppercase;
         color: #fff;
         width: 213px;
@@ -2264,16 +2259,11 @@ aside {
         border: none;
       }
     }
-    p {
-      font-family: Yeseva One, cursive;
-      font-size: 20px;
-      line-height: 28px;
-      text-align: center;
-      text-transform: uppercase;
+    h3 {
       color: $colorE3B873;
       max-width: 589px;
     }
-    div {
+    .social {
       margin-top: 22px;
       img {
         cursor: pointer;
@@ -2282,15 +2272,70 @@ aside {
     }
     iframe {
       margin-top: 45px;
-      width: 925px;
+      max-width: 925px;
+      width: 100%;
       height: 465px;
     }
   }
 }
-
-@media all and (max-width: 410px) {
+@media all and (max-width: 910px) {
+  .wr-map .container form div {
+    flex-direction: column;
+    align-items: center;
+    label:first-of-type {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
 }
-
+@media all and (max-width: 720px) {
+  .wr-map .container iframe {
+    height: 350px;
+    margin: 30px 20px 0 20px;
+  }
+}
+@media all and (max-width: 490px) {
+  .wr-map .container {
+    padding-bottom: 30px;
+    iframe {
+      order: 2;
+      margin: 0px 20px;
+    }
+    > div {
+      order: 4;
+    }
+    > p {
+      order: 3;
+      white-space: pre-line;
+    }
+    form {
+      width: 100%;
+      input[type="submit"] {
+        width: 95%;
+      }
+    }
+  }
+  .wr-clients {
+    padding-bottom: 280px;
+  }
+}
+@media all and (max-width: 410px) {
+  .wr-map {
+    background: $bg-dark;
+    .container {
+      background: none;
+      position: static;
+      padding-top: 0px;
+      form {
+        position: static;
+        padding: 10px 0 40px 0;
+      }
+      iframe {
+        height: 280px;
+      }
+    }
+  }
+}
 /* footer */
 footer {
   background: $bg-dark;
@@ -2323,5 +2368,26 @@ footer {
         color: $colorE3B873;
       }
     }
+  }
+}
+@media all and (max-width: 1190px) {
+  footer .container {
+    padding: 0 25px;
+    .phone {
+      margin: 0 15px;
+    }
+  }
+}
+@media all and (max-width: 930px) {
+  footer .container {
+    padding: 0 15px;
+    .logo {
+      max-width: 80px;
+    }
+  }
+}
+@media all and (max-width: 810px) {
+  footer {
+    display: none;
   }
 }

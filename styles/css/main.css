@@ -173,27 +173,24 @@ header .container li .active {
   header .container {
     padding: 0 25px;
   }
-
-  .phone {
+  header .container .phone {
     margin: 0 15px;
   }
 }
 @media all and (max-width: 930px) {
-  .logo {
-    max-width: 80px;
-  }
-
-  header .container {
+  footer .container {
     padding: 0 15px;
+  }
+  footer .container .logo {
+    max-width: 80px;
   }
 }
 @media all and (max-width: 810px) {
-  .call {
-    display: none;
-  }
-
   header .container {
     padding-right: 0;
+  }
+  header .container .call {
+    display: none;
   }
 }
 @media all and (max-width: 620px) {
@@ -301,17 +298,16 @@ aside .link:after {
 }
 
 @media all and (max-width: 700px) {
-  .container {
+  .wr-home .container {
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .wr-home .home {
+    padding: 100px 0 100px 30px;
   }
 
   h1 {
     font-size: 36px;
-  }
-
-  .wr-home .home {
-    padding: 100px 0 100px 30px;
   }
 }
 @media all and (max-width: 600px) {
@@ -1883,6 +1879,32 @@ aside .link:after {
   max-width: 460px;
   margin-top: 18px;
 }
+.wr-ourteam .container a {
+  font-family: Yeseva One, cursive;
+  font-size: 20px;
+  color: #181818;
+  cursor: pointer;
+  align-self: flex-end;
+  text-shadow: 0px 3px 10px rgba(160, 122, 61, 0.15);
+  margin-right: 50px;
+}
+.wr-ourteam .container a:hover,
+.wr-ourteam .container a:focus {
+  color: #e3b873;
+}
+.wr-ourteam .container a:after {
+  content: "";
+  background-image: url(../../img/arrow-slider-black.png);
+  display: block;
+  width: 42px;
+  height: 14px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -21px;
+  left: 58px;
+  opacity: 0.7;
+  transform: scale(0.7);
+}
 
 .team-photo {
   display: flex;
@@ -1894,6 +1916,7 @@ aside .link:after {
   display: flex;
   flex-direction: column;
   margin: 0 53px;
+  margin-bottom: -62px;
 }
 .foto img:first-of-type {
   width: 100%;
@@ -1945,10 +1968,8 @@ aside .link:after {
   line-height: 34px;
   text-align: center;
   color: #181818;
-  max-width: 605px;
   white-space: pre-wrap;
   margin-top: 8px;
-  justify-self: center;
 }
 
 .text2:before {
@@ -1997,6 +2018,9 @@ aside .link:after {
   .wr-ourteam .container .text1 {
     font-size: 15px;
   }
+  .wr-ourteam .container a {
+    display: none;
+  }
 
   .text2 {
     display: none;
@@ -2008,7 +2032,7 @@ aside .link:after {
   background-position: bottom;
   background-repeat: repeat-x;
   padding-top: 45px;
-  padding-bottom: 310px;
+  padding-bottom: 381px;
 }
 .wr-clients .container {
   display: flex;
@@ -2024,34 +2048,6 @@ aside .link:after {
   color: #363636;
   max-width: 350px;
   margin-top: 18px;
-}
-.wr-clients .container a {
-  font-family: Yeseva One, cursive;
-  font-size: 20px;
-  line-height: 28px;
-  color: #181818;
-  cursor: pointer;
-  align-self: flex-end;
-  text-shadow: 0px 3px 10px rgba(160, 122, 61, 0.15);
-  margin-top: 30px;
-  margin-right: 50px;
-}
-.wr-clients .container a:hover,
-.wr-clients .container a:focus {
-  color: #e3b873;
-}
-.wr-clients .container a:after {
-  content: "";
-  background-image: url(../../img/arrow-slider-black.png);
-  display: block;
-  width: 42px;
-  height: 14px;
-  background-repeat: no-repeat;
-  position: relative;
-  top: -21px;
-  left: 58px;
-  opacity: 0.7;
-  transform: scale(0.7);
 }
 
 .clients-reviews {
@@ -2155,7 +2151,6 @@ aside .link:after {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
   position: relative;
   padding-top: 271px;
@@ -2163,19 +2158,19 @@ aside .link:after {
 }
 .wr-map .container form {
   background-color: #131313;
-  width: 883px;
+  width: 60%;
   height: 445px;
   flex-direction: column;
   position: absolute;
   top: -222px;
-  padding: 32px 182px;
+  padding: 32px 0;
   box-sizing: border-box;
 }
 .wr-map .container form div {
   display: flex;
-  justify-content: space-between;
-  align-self: start;
-  width: 88%;
+}
+.wr-map .container form div label:first-of-type {
+  margin-right: 158px;
 }
 .wr-map .container form p {
   font-family: Yeseva One, cursive;
@@ -2184,7 +2179,6 @@ aside .link:after {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  max-width: 257px;
 }
 .wr-map .container form label {
   line-height: 20px;
@@ -2192,9 +2186,6 @@ aside .link:after {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-}
-.wr-map .container form label:first-of-type {
-  align-self: flex-start;
 }
 .wr-map .container form label[for=checkkk] {
   flex-direction: row;
@@ -2246,8 +2237,6 @@ aside .link:after {
 .wr-map .container form input[type=submit] {
   font-family: FuturaDemiC;
   font-size: 15px;
-  line-height: 26px;
-  text-align: center;
   text-transform: uppercase;
   color: #fff;
   width: 213px;
@@ -2256,28 +2245,83 @@ aside .link:after {
   box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
   border: none;
 }
-.wr-map .container p {
-  font-family: Yeseva One, cursive;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  text-transform: uppercase;
+.wr-map .container h3 {
   color: #e3b873;
   max-width: 589px;
 }
-.wr-map .container div {
+.wr-map .container .social {
   margin-top: 22px;
 }
-.wr-map .container div img {
+.wr-map .container .social img {
   cursor: pointer;
   margin: 0 5px;
 }
 .wr-map .container iframe {
   margin-top: 45px;
-  width: 925px;
+  max-width: 925px;
+  width: 100%;
   height: 465px;
 }
 
+@media all and (max-width: 910px) {
+  .wr-map .container form div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .wr-map .container form div label:first-of-type {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+@media all and (max-width: 720px) {
+  .wr-map .container iframe {
+    height: 350px;
+    margin: 30px 20px 0 20px;
+  }
+}
+@media all and (max-width: 490px) {
+  .wr-map .container {
+    padding-bottom: 30px;
+  }
+  .wr-map .container iframe {
+    order: 2;
+    margin: 0px 20px;
+  }
+  .wr-map .container > div {
+    order: 4;
+  }
+  .wr-map .container > p {
+    order: 3;
+    white-space: pre-line;
+  }
+  .wr-map .container form {
+    width: 100%;
+  }
+  .wr-map .container form input[type=submit] {
+    width: 95%;
+  }
+
+  .wr-clients {
+    padding-bottom: 280px;
+  }
+}
+@media all and (max-width: 410px) {
+  .wr-map {
+    background: #131313;
+  }
+  .wr-map .container {
+    background: none;
+    position: static;
+    padding-top: 0px;
+  }
+  .wr-map .container form {
+    position: static;
+    padding: 10px 0 40px 0;
+  }
+  .wr-map .container iframe {
+    height: 280px;
+  }
+}
 /* footer */
 footer {
   background: #131313;
@@ -2307,6 +2351,28 @@ footer .container li a:hover,
 footer .container li a:focus,
 footer .container li .active {
   color: #e3b873;
+}
+
+@media all and (max-width: 1190px) {
+  footer .container {
+    padding: 0 25px;
+  }
+  footer .container .phone {
+    margin: 0 15px;
+  }
+}
+@media all and (max-width: 930px) {
+  footer .container {
+    padding: 0 15px;
+  }
+  footer .container .logo {
+    max-width: 80px;
+  }
+}
+@media all and (max-width: 810px) {
+  footer {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
