@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="./styles/css/slick-theme.css">
   <link rel="stylesheet" type="text/css" href="./styles/css/slick.css">
   <link rel="stylesheet" type="text/css" href="./styles/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
 </head>
 
 <body>
@@ -86,14 +87,15 @@
       </div>
       <div class="block2">
         <ul class="tab">
-          <li class="tablinks" onclick="openCity(event, 'London')">rostov-on-don, admiral</li>
-          <li class="tablinks" onclick="openCity(event, 'Paris')">sochi thieves</li>
-          <li class="tablinks" onclick="openCity(event, 'Tokyo')">rostov-on-don patriotic</li>
+          <li class="tablinks active" onclick="slide(event, 'admiral')">rostov-on-don, admiral</li>
+          <li class="tablinks" onclick="slide(event, 'sochi')">sochi thieves</li>
+          <li class="tablinks" onclick="slide(event, 'patriotic')">rostov-on-don patriotic</li>
         </ul>
         <div class="slider2">
-          <img id="London" class="tabcontent" src="./img/slider1.jpg" alt="admiral">
-          <img id="Paris" class="tabcontent" src="./img/slider2.jpg" alt="admiral">
-          <img id="Tokyo" class="tabcontent" src="./img/slider3.jpg" alt="admiral">
+          <img id="admiral" class="tabcontent" src="./img/slider1.jpg" srcset="./img/slider1_retina2.jpg 2x, ./img/slider1_retina3.jpg 3x"
+            alt="admiral">
+          <img id="sochi" class="tabcontent" src="./img/slider2.jpg" srcset="./img/slider2_retina2.jpg 2x, ./img/slider2_retina3.jpg 3x" alt="sochi">
+          <img id="patriotic" class="tabcontent" src="./img/slider3.jpg" srcset="./img/slider3_retina2.jpg 2x, ./img/slider3_retina3.jpg 3x" alt="patriotic">
         </div>
       </div>
     </div>
@@ -122,8 +124,8 @@
         Leave a request below and you will receive a link to the broadcast.</p>
       <form action="#">
         <div>
-          <label><input type="text" placeholder="What is your name:">Name</label>
-          <label><input type="text" placeholder="Your phone number:">Phone</label>
+          <label><input type="text" autocomplete="on" required placeholder="What is your name:">Name</label>
+          <label><input type="text" autocomplete="on" required placeholder="Your phone number:">Phone</label>
           <label><input type="submit" value="SUBMIT"></label>
         </div>
         <input type="checkbox" id="check" checked>
@@ -256,9 +258,9 @@
       <div class="measurer">
         <form action="#">
           <h4>Leave a request for free departure of the measurer</h4>
-          <label><input type="text" placeholder="What is your name:">Name</label>
-          <label><input type="text" placeholder="Your phone number:">Phone</label>
-          <label><input type="text" placeholder="Your phone number:">Phone</label>
+          <label><input type="text" autocomplete="on" required placeholder="What is your name:">Name</label>
+          <label><input type="text" autocomplete="on" required placeholder="Your phone number:">Phone</label>
+          <label><input type="text" autocomplete="on" placeholder="Your email">Email</label>
           <input type="checkbox" id="checkk" checked>
           <label for="checkk">I agree to the processing of personal data</label>
           <input type="submit" value="call the measurer">
@@ -272,28 +274,28 @@
       <div class="list">
         <h2>We realize your wildest fantasies</h2>
         <ul>
-          <li>American classic</li>
-          <li>Empire</li>
-          <li>Classical</li>
-          <li>Loft</li>
-          <li>Minimalism</li>
-          <li>Provence</li>
-          <li>Romanticism</li>
-          <li>Scandinavian style</li>
-          <li>Mediterranean style</li>
-          <li>High tech</li>
-          <li>Eclecticism</li>
+          <li class="tablinks active" onclick="realization(event, '1')">American classic</li>
+          <li class="tablinks" onclick="realization(event, '2')">Empire</li>
+          <li class="tablinks" onclick="realization(event, '3')">Classical</li>
+          <li class="tablinks" onclick="realization(event, '4')">Loft</li>
+          <li class="tablinks" onclick="realization(event, '1')">Minimalism</li>
+          <li class="tablinks" onclick="realization(event, '2')">Provence</li>
+          <li class="tablinks" onclick="realization(event, '3')">Romanticism</li>
+          <li class="tablinks" onclick="realization(event, '4')">Scandinavian style</li>
+          <li class="tablinks" onclick="realization(event, '1')">Mediterranean style</li>
+          <li class="tablinks" onclick="realization(event, '2')">High tech</li>
+          <li class="tablinks" onclick="realization(event, '3')">Eclecticism</li>
         </ul>
       </div>
       <div class="pictures">
         <img src="./img/realizationmobile.jpg" alt="picture" class="mobile">
         <div class="first-column">
-          <img src="./img/picture1.jpg" alt="picture">
-          <img src="./img/picture2.jpg" alt="picture">
+          <img src="./img/picture1.jpg" id="1" class="tabcontent" alt="picture">
+          <img src="./img/picture2.jpg" id="2" class="tabcontent" alt="picture">
         </div>
         <div class="second-column">
-          <img src="./img/picture3.jpg" alt="picture">
-          <img src="./img/picture4.jpg" alt="picture">
+          <img src="./img/picture3.jpg" id="3" class="tabcontent" alt="picture">
+          <img src="./img/picture4.jpg" id="4" class="tabcontent" alt="picture">
         </div>
       </div>
     </div>
@@ -561,8 +563,8 @@
       <form action="#">
         <p>have any questions?</p>
         <div>
-          <label><input type="text" placeholder="What is your name:">Name</label>
-          <label><input type="text" placeholder="Your phone number:">Phone</label>
+          <label><input type="text" autocomplete="on" required placeholder="What is your name:">Name</label>
+          <label><input type="text" autocomplete="on" required placeholder="Your phone number:">Phone</label>
         </div>
         <label><input type="text" placeholder="I want to know:">Question</label>
         <input type="checkbox" id="checkkk" checked>

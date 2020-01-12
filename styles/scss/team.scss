@@ -5,17 +5,36 @@
     url(../../fonts/futdemic.ttf) format("truetype"),
     url(../../fonts/futdemic.eoteot?#iefix) format("embedded-opentype");
 }
+@font-face {
+  font-family: FuturaBookC;
+  src: url(../../fonts/futbookc.woff) format("webopen"),
+    url(../../fonts/futbookc.ttf) format("truetype"),
+    url(../../fonts/futbookc.eoteot?#iefix) format("embedded-opentype");
+}
+@font-face {
+  font-family: YesevaOne;
+  src: url(../../fonts/yesevaone.woff) format("webopen"),
+    url(../../fonts/yesevaone.ttf) format("truetype"),
+    url(../../fonts/yesevaone.eoteot?#iefix) format("embedded-opentype");
+}
+@font-face {
+  font-family: ProximaNova;
+  src: url(../../fonts/proximanova.woff) format("webopen"),
+    url(../../fonts/proximanova.ttf) format("truetype"),
+    url(../../fonts/proximanova.eoteot?#iefix) format("embedded-opentype");
+}
+@font-face {
+  font-family: FuturaMediumC;
+  src: url(../../fonts/futmediumc.woff) format("webopen"),
+    url(../../fonts/futmediumc.ttf) format("truetype"),
+    url(../../fonts/futmediumc.eoteot?#iefix) format("embedded-opentype");
+}
 $bg-dark: #131313;
 $colorE3B873: #e3b873;
 $colorWhite: #fff;
 $color363636: #363636;
 $color181818: #181818;
 $color959595: #959595;
-%flex-center-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 body {
   background-color: $colorWhite;
   font-size: 14px;
@@ -29,25 +48,50 @@ a {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /* header */
 header {
   background: $bg-dark;
   .container {
-    @extend %flex-center-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 116px 0 96px;
     height: 83px;
     div {
-      @extend %flex-center-between;
-      flex-grow: 2.4;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-flex: 2.4;
+          -ms-flex-positive: 2.4;
+              flex-grow: 2.4;
       nav {
-        flex-grow: 1;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
       }
     }
     ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
     }
     li {
       a {
@@ -76,12 +120,14 @@ header {
   color: $colorWhite;
   border-radius: 2px;
   border: 1px solid $colorWhite;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
 }
 .call:hover {
   background: $colorE3B873;
-  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
 }
 .logo,
 .phone {
@@ -92,7 +138,9 @@ header {
   color: $colorE3B873;
 }
 .logo {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .phone {
   display: inline-block;
@@ -114,9 +162,16 @@ header {
   }
 }
 .our-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .text1 {
   font-family: FuturaBookC;
@@ -152,6 +207,7 @@ header {
 }
 .team-photo {
   display: grid;
+  grid-template-rows: repeat(14, -webkit-min-content);
   grid-template-rows: repeat(14, min-content);
   grid-template-columns: repeat(3, 1fr);
   gap: 50px 70px;
@@ -159,9 +215,11 @@ header {
 }
 .foto {
   display: grid;
+  grid-template-rows: 35px 282px 83px 10px 45px -webkit-min-content;
   grid-template-rows: 35px 282px 83px 10px 45px min-content;
   grid-template-columns: 35px 20px 230px 20px 35px;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   padding: 15px;
   img:first-child {
     grid-row: 2/4;
@@ -171,7 +229,8 @@ header {
   img:nth-child(2) {
     grid-row: 1/2;
     grid-column: 1/2;
-    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.7);
+    -webkit-box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.7);
+            box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.7);
   }
   p:nth-child(3) {
     grid-row: 3/5;
@@ -185,7 +244,8 @@ header {
     width: 100%;
     text-align: center;
     padding-top: 20px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   }
   span {
     font-family: FuturaBookC;
@@ -204,7 +264,8 @@ header {
     text-align: center;
     height: 45px;
     line-height: 45px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   }
   p:nth-child(5) {
     grid-row: 6/7;
@@ -258,6 +319,7 @@ header {
 @media all and (max-width: 1250px) {
   .team-photo {
     grid-template-rows: repeat(25, 1fr);
+    grid-template-columns: repeat(2, -webkit-min-content);
     grid-template-columns: repeat(2, min-content);
     gap: 40px 70px;
   }
