@@ -1,41 +1,71 @@
 @import "reset.css";
 @font-face {
   font-family: FuturaDemiC;
-  src: url(../../fonts/futdemic.woff) format("webopen"), url(../../fonts/futdemic.ttf) format("truetype"), url(../../fonts/futdemic.eoteot?#iefix) format("embedded-opentype");
+  src: url(../../fonts/futdemic.woff) format("webopen"),
+    url(../../fonts/futdemic.ttf) format("truetype"),
+    url(../../fonts/futdemic.eoteot?#iefix) format("embedded-opentype");
 }
 @font-face {
   font-family: FuturaBookC;
-  src: url(../../fonts/futbookc.woff) format("webopen"), url(../../fonts/futbookc.ttf) format("truetype"), url(../../fonts/futbookc.eoteot?#iefix) format("embedded-opentype");
+  src: url(../../fonts/futbookc.woff) format("webopen"),
+    url(../../fonts/futbookc.ttf) format("truetype"),
+    url(../../fonts/futbookc.eoteot?#iefix) format("embedded-opentype");
 }
 @font-face {
   font-family: YesevaOne;
-  src: url(../../fonts/yesevaone.woff) format("webopen"), url(../../fonts/yesevaone.ttf) format("truetype"), url(../../fonts/yesevaone.eoteot?#iefix) format("embedded-opentype");
+  src: url(../../fonts/yesevaone.woff) format("webopen"),
+    url(../../fonts/yesevaone.ttf) format("truetype"),
+    url(../../fonts/yesevaone.eoteot?#iefix) format("embedded-opentype");
 }
 @font-face {
   font-family: ProximaNova;
-  src: url(../../fonts/proximanova.woff) format("webopen"), url(../../fonts/proximanova.ttf) format("truetype"), url(../../fonts/proximanova.eoteot?#iefix) format("embedded-opentype");
+  src: url(../../fonts/proximanova.woff) format("webopen"),
+    url(../../fonts/proximanova.ttf) format("truetype"),
+    url(../../fonts/proximanova.eoteot?#iefix) format("embedded-opentype");
 }
 @font-face {
   font-family: FuturaMediumC;
-  src: url(../../fonts/futmediumc.woff) format("webopen"), url(../../fonts/futmediumc.ttf) format("truetype"), url(../../fonts/futmediumc.eoteot?#iefix) format("embedded-opentype");
+  src: url(../../fonts/futmediumc.woff) format("webopen"),
+    url(../../fonts/futmediumc.ttf) format("truetype"),
+    url(../../fonts/futmediumc.eoteot?#iefix) format("embedded-opentype");
 }
-.wr-map .container form label, .review > p, .second-flex p, .slider-steps p, .design-projects ul, .wr-types .repair ul, .wr-video form div label, .sl1 li {
+.wr-map .container form label,
+.review > p,
+.second-flex p,
+.slider-steps p,
+.design-projects ul,
+.wr-types .repair ul,
+.wr-video form div label,
+.sl1 li {
   font-family: FuturaBookC;
   font-size: 15px;
 }
 
-.wr-clients .container .text1, .text2, .wr-ourteam .container .text1, .wr-design .container > p, .wr-video p {
+.wr-clients .container .text1,
+.text2,
+.wr-ourteam .container .text1,
+.wr-design .container > p,
+.wr-video p {
   font-family: FuturaBookC;
   font-size: 20px;
 }
 
-.slider-steps span, .design-projects .cost, .wr-types .repair .cost, .sl1 span {
+.slider-steps span,
+.design-projects .cost,
+.wr-types .repair .cost,
+.sl1 span {
   font-family: YesevaOne;
   font-size: 18px;
   text-transform: uppercase;
 }
 
-footer .container div, footer .container, .wr-map .container form, .measurer form, .wr-video form, header .container div, header .container {
+footer .container div,
+footer .container,
+.wr-map .container form,
+.measurer form,
+.wr-video form,
+header .container div,
+header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +77,11 @@ footer .container div, footer .container, .wr-map .container form, .measurer for
   justify-content: space-between;
 }
 
-.wr-video .stop, .wr-video .restart, .wr-video .rew, .wr-video .fastfwd, .wr-video .play {
+.wr-video .stop,
+.wr-video .restart,
+.wr-video .rew,
+.wr-video .fastfwd,
+.wr-video .play {
   width: 45px;
   height: 45px;
   background: #e3b873;
@@ -105,7 +139,6 @@ h3 {
   text-align: center;
   text-transform: uppercase;
 }
-
 /* header */
 header {
   background: #131313;
@@ -144,7 +177,6 @@ header .container li a:focus,
 header .container li .active {
   color: #e3b873;
 }
-
 .call {
   font-family: FuturaDemiC;
   font-weight: 600;
@@ -160,13 +192,11 @@ header .container li .active {
   box-sizing: border-box;
   cursor: pointer;
 }
-
 .call:hover {
   background: #e3b873;
   -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
 }
-
 .logo,
 .phone {
   font-family: FuturaDemiC;
@@ -175,13 +205,11 @@ header .container li .active {
   text-transform: uppercase;
   color: #e3b873;
 }
-
 .logo {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
-
 .phone {
   display: inline-block;
   border-bottom: solid 1px;
@@ -267,8 +295,20 @@ header .container li .active {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../../img/wr-repair.jpg);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../img/wr-repair.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(../../img/wr-repair.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../../img/wr-repair.jpg);
   background-size: cover;
   width: 100%;
   padding: 192px 0 190px 60px;
@@ -651,7 +691,7 @@ aside .link:after {
   }
 
   .block2 ul li,
-.sl1 span {
+  .sl1 span {
     text-transform: capitalize;
     font-size: 14px;
   }
@@ -722,7 +762,7 @@ aside .link:after {
     transform: translate(65px, -15px);
   }
   .slider1 .slick-prev,
-.slider1 .slick-next {
+  .slider1 .slick-next {
     bottom: -15px;
   }
 
@@ -752,7 +792,7 @@ aside .link:after {
     max-width: 340px;
   }
   .slider2 .slick-next:before,
-.slider2 .slick-prev:before {
+  .slider2 .slick-prev:before {
     width: 25px;
     height: 25px;
   }
@@ -779,7 +819,7 @@ aside .link:after {
     display: none;
   }
   .slider1 .slick-prev,
-.slider1 .slick-next {
+  .slider1 .slick-next {
     display: none;
   }
 }
@@ -935,7 +975,7 @@ aside .link:after {
   cursor: pointer;
   margin-top: 33px;
 }
-.wr-video form input[type=checkbox] + label[for=check]:before {
+.wr-video form input[type="checkbox"] + label[for="check"]:before {
   content: "";
   width: 18px;
   height: 18px;
@@ -944,7 +984,7 @@ aside .link:after {
   border-radius: 1px;
   margin-right: 10px;
 }
-.wr-video form input[type=checkbox]:checked + label[for=check]:before {
+.wr-video form input[type="checkbox"]:checked + label[for="check"]:before {
   background-image: url(../../img/checkbox.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -970,7 +1010,7 @@ aside .link:after {
   line-height: 20px;
   color: rgba(54, 54, 54, 0.5);
 }
-.wr-video form input[type=text] {
+.wr-video form input[type="text"] {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: rgba(54, 54, 54, 0.3);
@@ -1005,7 +1045,7 @@ aside .link:after {
   line-height: 24px;
   color: #363636;
 }
-.wr-video form input[type=submit] {
+.wr-video form input[type="submit"] {
   font-family: FuturaDemiC;
   font-size: 15px;
   text-align: center;
@@ -1019,7 +1059,7 @@ aside .link:after {
   border-radius: 2px;
   border: none;
 }
-.wr-video form input[type=checkbox] {
+.wr-video form input[type="checkbox"] {
   display: none;
 }
 
@@ -1081,6 +1121,9 @@ aside .link:after {
   .wr-video form input {
     background-color: #131313;
   }
+  .wr-video form input[type="text"] {
+    color: #fff;
+  }
   .wr-video form input::-webkit-input-placeholder {
     color: #fff;
   }
@@ -1116,10 +1159,10 @@ aside .link:after {
     top: -20px;
   }
   .wr-video .stop,
-.wr-video .restart,
-.wr-video .rew,
-.wr-video .fastfwd,
-.wr-video .play {
+  .wr-video .restart,
+  .wr-video .rew,
+  .wr-video .fastfwd,
+  .wr-video .play {
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
     margin: 0;
@@ -1131,7 +1174,7 @@ aside .link:after {
   }
 }
 @media all and (max-width: 530px) {
-  .wr-video p {
+   .wr-video p {
     font-size: 14px;
     line-height: 24px;
   }
@@ -1343,7 +1386,6 @@ aside .link:after {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
 .free-metering {
   background-image: url(../../img/metering.png);
   background-repeat: no-repeat;
@@ -1364,7 +1406,6 @@ aside .link:after {
   font-size: 18px;
   line-height: 21px;
 }
-
 .measurer {
   padding: 51px 98px 80px 0;
 }
@@ -1405,13 +1446,13 @@ aside .link:after {
   width: 100%;
   cursor: pointer;
 }
-.measurer form label[for=checkk] {
+.measurer form label[for="checkk"] {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
 }
-.measurer form input[type=text] {
+.measurer form input[type="text"] {
   font-family: FuturaMediumC;
   font-size: 18px;
   line-height: 25px;
@@ -1439,7 +1480,7 @@ aside .link:after {
 .measurer form input::placeholder {
   color: #fff;
 }
-.measurer form input[type=submit] {
+.measurer form input[type="submit"] {
   width: 213px;
   line-height: 51px;
   background: #e3b873;
@@ -1454,10 +1495,10 @@ aside .link:after {
   -webkit-transform: translateX(45%);
   transform: translateX(45%);
 }
-.measurer form input[type=checkbox] {
+.measurer form input[type="checkbox"] {
   display: none;
 }
-.measurer form input[type=checkbox] + label[for=checkk]:before {
+.measurer form input[type="checkbox"] + label[for="checkk"]:before {
   content: "";
   width: 18px;
   height: 18px;
@@ -1466,7 +1507,7 @@ aside .link:after {
   border-radius: 1px;
   margin-right: 10px;
 }
-.measurer form input[type=checkbox]:checked + label[for=checkk]:before {
+.measurer form input[type="checkbox"]:checked + label[for="checkk"]:before {
   background-image: url(../../img/checkbox.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -1547,7 +1588,12 @@ aside .link:after {
 }
 /* wr-realization */
 .wr-realization .container {
-  background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)), url(../../img/wr-realization.jpg);
+  background: linear-gradient(
+      120.96deg,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(../../img/wr-realization.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -1568,6 +1614,9 @@ aside .link:after {
   font-size: 20px;
   line-height: 49px;
   color: #fff;
+}
+.wr-realization .container .list li {
+  cursor: pointer;
 }
 .wr-realization .container .list ul li:hover,
 .wr-realization .container .list ul .active {
@@ -1702,7 +1751,13 @@ aside .link:after {
 }
 @media all and (max-width: 450px) {
   .wr-realization {
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(40.5%, #131313), color-stop(40.5%, #fff));
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(40.5%, #131313),
+      color-stop(40.5%, #fff)
+    );
     background: linear-gradient(to top, #131313 40.5%, #fff 40.5%);
   }
   .wr-realization .container {
@@ -1726,7 +1781,13 @@ aside .link:after {
 }
 /* design */
 .wr-design {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(40.5%, #131313), color-stop(40.5%, #fff));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(40.5%, #131313),
+    color-stop(40.5%, #fff)
+  );
   background: linear-gradient(to top, #131313 40.5%, #fff 40.5%);
   padding-top: 152px;
 }
@@ -1836,7 +1897,7 @@ aside .link:after {
     padding-top: 50px;
   }
   .wr-design .container h3,
-.wr-design .container > p {
+  .wr-design .container > p {
     color: #fff;
     white-space: normal;
   }
@@ -2090,7 +2151,13 @@ aside .link:after {
 /* wr-ourteam */
 .wr-ourteam {
   padding: 94px 0 50px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #131313), color-stop(50%, #fff));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(50%, #131313),
+    color-stop(50%, #fff)
+  );
   background: linear-gradient(to bottom, #131313 50%, #fff 50%);
 }
 .wr-ourteam .container {
@@ -2491,13 +2558,13 @@ aside .link:after {
   flex-direction: column;
   cursor: pointer;
 }
-.wr-map .container form label[for=checkkk] {
+.wr-map .container form label[for="checkkk"] {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
 }
-.wr-map .container form input[type=checkbox] + label[for=checkkk]:before {
+.wr-map .container form input[type="checkbox"] + label[for="checkkk"]:before {
   content: "";
   width: 18px;
   height: 18px;
@@ -2506,15 +2573,19 @@ aside .link:after {
   border-radius: 1px;
   margin-right: 10px;
 }
-.wr-map .container form input[type=checkbox]:checked + label[for=checkkk]:before {
+.wr-map
+  .container
+  form
+  input[type="checkbox"]:checked
+  + label[for="checkkk"]:before {
   background-image: url(../../img/checkbox.png);
   background-repeat: no-repeat;
   background-position: center;
 }
-.wr-map .container form input[type=checkbox] {
+.wr-map .container form input[type="checkbox"] {
   display: none;
 }
-.wr-map .container form input[type=text] {
+.wr-map .container form input[type="text"] {
   font-family: FuturaBookC;
   font-size: 18px;
   line-height: 24px;
@@ -2541,7 +2612,7 @@ aside .link:after {
 .wr-map .container form input::placeholder {
   color: #fff;
 }
-.wr-map .container form input[type=submit] {
+.wr-map .container form input[type="submit"] {
   font-family: FuturaDemiC;
   font-size: 15px;
   text-transform: uppercase;
@@ -2616,7 +2687,7 @@ aside .link:after {
   .wr-map .container form {
     width: 100%;
   }
-  .wr-map .container form input[type=submit] {
+  .wr-map .container form input[type="submit"] {
     width: 95%;
   }
 
